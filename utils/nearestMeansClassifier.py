@@ -44,7 +44,7 @@ class NearestMeansClassifier():
     
 
 
-    def generateData(self, data):
+    def generateData(self, data, printFlag = True):
 
         '''
         Generate numpy array of input data points, X and Target vector, T
@@ -84,13 +84,13 @@ class NearestMeansClassifier():
         # Storing the # of unique classes in self.nc calculated from the classes returned by np.unique().
         self.nc = len(classes)
 
-
-        print("---------------------------------------------------")
-        print(f"  Shape of Input Data: {data_np.shape}")
-        print(f"  Number of Data Points: {self.n}")
-        print(f"  Number of Input Features: {self.d}")
-        print(f"  Number of Target Classes: {self.nc}")
-        print("---------------------------------------------------")
+        if printFlag:
+            print("---------------------------------------------------")
+            print(f"  Shape of Input Data: {data_np.shape}")
+            print(f"  Number of Data Points: {self.n}")
+            print(f"  Number of Input Features: {self.d}")
+            print(f"  Number of Target Classes: {self.nc}")
+            print("---------------------------------------------------")
         
         return (X, self.n, T)
 
@@ -98,7 +98,7 @@ class NearestMeansClassifier():
 
         '''
         Transforms the test_Data pandas dataframe into numpy array and splits it into features and true labels.
-        
+
         Input -> test_data which is a pandas dataframe of testing data.
         Output -> Tuple of input features of test data, # of features in the input data, True labels vector for test data
         (X_test, n_test, T_test).
@@ -116,7 +116,7 @@ class NearestMeansClassifier():
         return (X_test, n_test, T_test)
 
 
-    def calculateClassMeans(self, X):
+    def calculateClassMeans(self, X, redFlag = False):
 
         '''
         Calculate class means or sample means from the input data points, X
@@ -125,9 +125,12 @@ class NearestMeansClassifier():
         output -> numpy array, sample_means of shape (nc, d).
         
         '''
+        if redFlag:
+            self.sample_means = np.zeros((self.nc, self.d - 1))
 
-        # Re-Initializing self.sample_means with zeros of shape (nc, d) [no. of classes x no. of features]
-        self.sample_means = np.zeros((self.nc, self.d))
+        else:
+            # Re-Initializing self.sample_means with zeros of shape (nc, d) [no. of classes x no. of features]
+            self.sample_means = np.zeros((self.nc, self.d))
 
         for i in range(self.nc - 1):
             self.sample_means[i] = np.mean(X[self.classIndices[i] : self.classIndices[i+1]], axis=0)
@@ -137,7 +140,7 @@ class NearestMeansClassifier():
         return self.sample_means
         
  
-    def standardizeData(self, X):
+    def standardizeData(self, X, printFlag = True):
 
         '''
         Standardize the input numpy array of data points X by subtracting mean from every data point and dividing
@@ -152,11 +155,11 @@ class NearestMeansClassifier():
         # Calculating standard deviation for the input features column-wise.
         X_std = np.std(X, axis = 0)
 
-
-        print(f"Shape of X_mean: {X_mean.shape}")
-        print(f"Shape of X_std: {X_std.shape}")
-        print(f"Mean of X along columns is: {X_mean}")
-        print(f"Standard Deviation of X along columns is: {X_std}")
+        if printFlag:
+            print(f"Shape of X_mean: {X_mean.shape}")
+            print(f"Shape of X_std: {X_std.shape}")
+            print(f"Mean of X along columns is: {X_mean}")
+            print(f"Standard Deviation of X along columns is: {X_std}")
 
         # Subtract Mean from X (Brodcasting Takes place internally)
         # We can directly subtract mean from X
@@ -166,7 +169,8 @@ class NearestMeansClassifier():
         # We can directly divide X by X_std
         X = X / X_std
 
-        print("Input Data, X has been Standardized successfully!")
+        if printFlag:
+            print("Input Data, X has been Standardized successfully!")
 
         return X
 
