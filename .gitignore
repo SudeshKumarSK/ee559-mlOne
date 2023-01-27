@@ -2,5 +2,7 @@
 utils/__pycache__/generateData.cpython-310.pyc
 utils/__pycache__/nearestMeansClassifier.cpython-310.pyc
 utils/__pycache__/plotDecBoundaries.cpython-310.pyc
-test.py
+test_sklearn.py
+test_standardize.py
 hw_1.ipynb
+nearestMeansClassifier_old.py
