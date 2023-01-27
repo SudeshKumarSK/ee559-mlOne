@@ -96,6 +96,14 @@ class NearestMeansClassifier():
 
     def transformTestData(self, test_data):
 
+        '''
+        Transforms the test_Data pandas dataframe into numpy array and splits it into features and true labels.
+        
+        Input -> test_data which is a pandas dataframe of testing data.
+        Output -> Tuple of input features of test data, # of features in the input data, True labels vector for test data
+        (X_test, n_test, T_test).
+        '''
+
         # Converting the test dataframe to numpy array.
         test_data_np = test_data.to_numpy()
 
