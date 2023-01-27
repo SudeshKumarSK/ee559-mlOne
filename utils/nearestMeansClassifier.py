@@ -181,6 +181,7 @@ class NearestMeansClassifier():
 
 
     def classify(self):
+        self.Y_hat = []
         for x in self.X:
             distances = []
             for mean in self.sample_means:
