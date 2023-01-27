@@ -12,88 +12,159 @@ from scipy.spatial.distance import cdist
 
 
 
-# The main NearestMeansClassifier class which has member functions to perform:  
-#                   1. Generation of numpy data from the input dataframe.
-#                   2. Find the # of data points, # of features and # of classes.
-#                   3. Calculation of samples_means for the given data.
-#                   4. Generate the target labels from the input dataframe.
-#                   5. Plotting the Data Points, Sample Means, Decision Boundaries and Decision Regions.
-#                   6. Perform Nearest Means Classification on the Input Data.
-#                   7. Find the Accuracy of the Classification error rate (Accuracy).
-
 class NearestMeansClassifier():
 
-    def __init__(self, data):   
-        self.data = data 
-        self.X = np.zeros((1,1))
-        self.d = 0
-        self.n = 0
+    '''
+        The main NearestMeansClassifier class which has member functions to perform:  
 
-        self.T = np.zeros((1,))
-        self.nc = 0
-        self.classes = np.zeros((1,))
+                   1. Generation of numpy data from the input dataframe.
+                   2. Find the # of data points, # of features and # of classes.
+                   3. Calculation of samples_means for the given data.
+                   4. Generate the target labels from the input dataframe.
+                   5. Plotting the Data Points, Sample Means, Decision Boundaries and Decision Regions.
+                   6. Perform Nearest Means Classification on the Input Data.
+                   7. Find the Accuracy and Classification Error Rate of the Classifier.
 
-        self.sample_means = np.zeros((1,1))
-        self.Y_hat = []
-        
+    '''
 
-    def printPattern(self):
-        print()
-        print("----------#################################################################-------------")
-        print()
+    def __init__(self):   
 
+        '''
+            Non-Paramertised Constructor for the NearestMeansClassifier clas.
+        '''
+
+        # All data-members of the class are declared and initialized below.
+
+        self.d = 0  # d is the number of features in the input data(X).
+        self.n = 0  # n is the number of data points in the input data(X).
+        self.nc = 0 # nc is the number of classes in the target(t).
+        self.classes = np.zeros((1,)) # classes hold the different labels in the target(T).
+        self.classIndices = np.zeros((1,)) # classIndices hold the index of where a labels starts in the sorted data (X)
+        self.sample_means = np.zeros((1,1)) # sample_means holds the sample_means calculated from the input features.
     
 
-    def generate_data(self):
-        n_cols = self.data.shape[1]
-        self.d = n_cols-1
-        data_sorted = self.data.sort_values(by=self.data.columns[-1])
+
+    def generateData(self, data):
+
+        '''
+        Generate numpy array of input data points, X and Target vector, T
+
+
+        input -> Pandas dataframe.
+        output -> tuple of input features (X), # of data points in X, Target labels (X, d, T)
+
+        '''
+
+        # n_cols = data.shape[1]
+        # Storing the # of features in self.d calculated from the shape of input dataframe.
+        self.d = data.shape[1] - 1
+        
+        # Storing the # of data points in self.n calculated from the shape of input dataframe.
+        self.n = data.shape[0]
+
+        # Sorting the input dataframe based on the target labels and generating a new dataframe data_sorted.
+        data_sorted = data.sort_values(by=data.columns[-1])
+
+        # Converting the sorted dataframe to numpy array.
         data_np = data_sorted.to_numpy()
 
+        # Spliting the data_np into input features (X) and output target (T) basically splitting labels and features.
+        X = data_np[:, 0:self.d]
+        T = data_np[:, -1]
         
-        self.X = data_np[:, 0:n_cols-1]
-        self.T = data_np[:, -1]
-        self.n = data_np.shape[0]
+        # Finding the number of unique labels in the Target (T)
+        classes, class_index, class_count = np.unique(T, return_index=True, return_counts=True, axis=None)
 
-        classes, class_index, class_count = np.unique(self.T, return_index=True, return_counts=True, axis=None)
+        # Storing the different types of classes (lables) in self.classes. For Eg, it can either be (0, 1) or (1, 2) or (1, 2, 3).
         self.classes = classes
+
+        # Storing where the different labels start in the target (T). We will use this to compute the class means (or) sample means.
+        self.classIndices = class_index
+
+        # Storing the # of unique classes in self.nc calculated from the classes returned by np.unique().
         self.nc = len(classes)
-
-        self.sample_means = np.zeros((self.nc, self.d))
-        for i in range(self.nc - 1):
-            self.sample_means[i] = np.mean(self.X[class_index[i] : class_index[i+1]], axis=0)
-
-        self.sample_means[self.nc-1] = np.mean(self.X[class_index[self.nc - 1]:], axis=0)
 
 
         print("---------------------------------------------------")
-        print(f"  Shape of Training Data: {data_np.shape}")
+        print(f"  Shape of Input Data: {data_np.shape}")
         print(f"  Number of Data Points: {self.n}")
         print(f"  Number of Input Features: {self.d}")
         print(f"  Number of Target Classes: {self.nc}")
         print("---------------------------------------------------")
         
-        self.printPattern()
+        return (X, self.n, T)
 
-        print("---------------------------------------------------")
-        print(f"  Shape of sample_means: {self.sample_means.shape}")
-        print(f"  Sample Means: ")
-        print(self.sample_means)
-        print("---------------------------------------------------")
+    def transformTestData(self, test_data):
 
-        self.printPattern()
+        # Converting the test dataframe to numpy array.
+        test_data_np = test_data.to_numpy()
+
+        # Spliting the test_data_np into input features (X_test) and true labels vector (T_test) 
+        # basically splitting labels and features of the test_data.
+        X_test = test_data_np[:, 0:self.d]
+        T_test = test_data_np[:, -1]
+        n_test = test_data_np.shape[0]
+
+        return (X_test, n_test, T_test)
 
 
+    def calculateClassMeans(self, X):
 
-    def findClassMeans(self):
+        '''
+        Calculate class means or sample means from the input data points, X
+
+        input -> numpy array of data points (X).
+        output -> numpy array, sample_means of shape (nc, d).
+        
+        '''
+
+        # Re-Initializing self.sample_means with zeros of shape (nc, d) [no. of classes x no. of features]
+        self.sample_means = np.zeros((self.nc, self.d))
+
+        for i in range(self.nc - 1):
+            self.sample_means[i] = np.mean(X[self.classIndices[i] : self.classIndices[i+1]], axis=0)
+
+        self.sample_means[self.nc-1] = np.mean(X[self.classIndices[self.nc - 1]:], axis=0)
+
         return self.sample_means
+        
+ 
+    def standardizeData(self, X):
+
+        '''
+        Standardize the input numpy array of data points X by subtracting mean from every data point and dividing
+        every data point by the standard deviation.
+
+        input -> numpy array of data points, X.
+        output -> numpy array of standardized data points, X.
+        '''
+        # Calculating mean for the input features column-wise.
+        X_mean = np.mean(X, axis = 0)
+
+        # Calculating standard deviation for the input features column-wise.
+        X_std = np.std(X, axis = 0)
 
 
-    def plotBoundary(self):
-        self.plotDecBoundaries(self.X, self.T, self.sample_means)
+        print(f"Shape of X_mean: {X_mean.shape}")
+        print(f"Shape of X_std: {X_std.shape}")
+        print(f"Mean of X along columns is: {X_mean}")
+        print(f"Standard Deviation of X along columns is: {X_std}")
+
+        # Subtract Mean from X (Brodcasting Takes place internally)
+        # We can directly subtract mean from X
+        X = X - X_mean
+
+        # Divide X by X_std(Brodcasting Takes place internally)
+        # We can directly divide X by X_std
+        X = X / X_std
+
+        print("Input Data, X has been Standardized successfully!")
+
+        return X
 
 
-    def plotDecBoundaries(self, training, label_train, sample_mean, fsize=(18,18)):
+    
+    def plotDecisionBoundaries(self, training, label_train, sample_mean, fsize=(18,18)):
     
         '''
         Plot the decision boundaries and data points for minimum distance to
@@ -180,31 +251,76 @@ class NearestMeansClassifier():
         plt.show()
 
 
-    def classify(self):
-        self.Y_hat = []
-        for x in self.X:
+
+    def classify(self, X):
+
+        '''
+        It takes the input numpy array of data points and predicts the labels f
+        or the data points and returns a list of predictions.
+
+        input -> numpy array of data points, X.
+        output -> list of predicted output labels, Y_hat.
+
+        '''
+
+        # List to store the predictions.
+        Y_hat = []
+
+        # Iterate over every data point in the input X
+        for x in X:
+
+            # distances stores the euclidean distance of the input data point from sample_means.
+            # distance will have a length same as the # of classes (nc )
             distances = []
+
             for mean in self.sample_means:
+                # If a data point is made up of 2 features then x.shape will be (2,).
                 euclidean_Dist = np.linalg.norm(x - mean)
                 distances.append(euclidean_Dist)
-            self.Y_hat.append(self.classes[np.argmin(distances)])
+            Y_hat.append(self.classes[np.argmin(distances)])
+        
+        return Y_hat
+
+
+    def calculateCER(self, T, Y_hat, percentageFlag = False):
+
+        '''
+        Calculates the Classification Error Rate from the Target Vector(T) and Prediction Vector(Y_hat)
+
+        Input -> Target Vector(T), Prediction Vector(Y_hat) and a percentageFlag to display CER in percentage or not.
+        Output -> Classification Error Rate in float or percentage value.
+        
+        '''
+        totalPredictions = self.n
+        incorrectPredictions = 0
+
+        for i in range(len(Y_hat)):
+            if T[i] != Y_hat[i]:
+                incorrectPredictions += 1
+
+        if percentageFlag:
+            return (incorrectPredictions / totalPredictions) * 100
+        return incorrectPredictions / totalPredictions
 
 
 
-    def calculateAccuracy(self, percentageFlag = False):
+    def calculateAccuracy(self, T, Y_hat, percentageFlag = False):
+
+        '''
+        Calculates the Classifier's Accuracy from the Target Vector(T) and Prediction Vector(Y_hat)
+
+        Input -> Target Vector(T), Prediction Vector(Y_hat) and a percentageFlag to display CER in percentage or not.
+        Output -> Accuracy in float or percentage value.
+        
+        '''
+
         totalPredictions = self.n
         correctPredictions = 0
 
-        for i in range(len(self.Y_hat)):
-            if self.T[i] == self.Y_hat[i]:
+        for i in range(len(Y_hat)):
+            if T[i] == Y_hat[i]:
                 correctPredictions += 1
 
         if percentageFlag:
             return (correctPredictions / totalPredictions) * 100
         return correctPredictions / totalPredictions
-
-        
-
-    
-        
-
