@@ -11,7 +11,6 @@ import matplotlib.pyplot as plt
 from scipy.spatial.distance import cdist
 
 
-
 class NearestMeansClassifier():
 
     '''
@@ -38,11 +37,15 @@ class NearestMeansClassifier():
         self.d = 0  # d is the number of features in the input data(X).
         self.n = 0  # n is the number of data points in the input data(X).
         self.nc = 0 # nc is the number of classes in the target(t).
+        self.X_mean = 0.0
+        self.X_std = 0.0
         self.classes = np.zeros((1,)) # classes hold the different labels in the target(T).
         self.classIndices = np.zeros((1,)) # classIndices hold the index of where a labels starts in the sorted data (X)
         self.sample_means = np.zeros((1,1)) # sample_means holds the sample_means calculated from the input features.
-    
-
+        self.m_star = 0 # m_star holds the index of the vector which had the least CER.
+        self.rm_star = np.zeros((1,1)) #rm_star holds the vector on which X projected and gave the least CER.
+        self.class_means_rm_star = np.zeros((1,1)) #class_means_rm_star holds the class_means of the least CER after projection.
+        
 
     def generateData(self, data, printFlag = True):
 
@@ -126,21 +129,21 @@ class NearestMeansClassifier():
         
         '''
         if redFlag:
-            self.sample_means = np.zeros((self.nc, self.d - 1))
+            sample_means = np.zeros((self.nc, self.d - 1))
 
         else:
             # Re-Initializing self.sample_means with zeros of shape (nc, d) [no. of classes x no. of features]
-            self.sample_means = np.zeros((self.nc, self.d))
+            sample_means = np.zeros((self.nc, self.d))
 
         for i in range(self.nc - 1):
-            self.sample_means[i] = np.mean(X[self.classIndices[i] : self.classIndices[i+1]], axis=0)
+            sample_means[i] = np.mean(X[self.classIndices[i] : self.classIndices[i+1]], axis=0)
 
-        self.sample_means[self.nc-1] = np.mean(X[self.classIndices[self.nc - 1]:], axis=0)
+        sample_means[self.nc-1] = np.mean(X[self.classIndices[self.nc - 1]:], axis=0)
 
-        return self.sample_means
+        return sample_means
         
  
-    def standardizeData(self, X, printFlag = True):
+    def standardizeTrainData(self, X_train, printFlag = True):
 
         '''
         Standardize the input numpy array of data points X by subtracting mean from every data point and dividing
@@ -150,29 +153,49 @@ class NearestMeansClassifier():
         output -> numpy array of standardized data points, X.
         '''
         # Calculating mean for the input features column-wise.
-        X_mean = np.mean(X, axis = 0)
+        self.X_mean = np.mean(X_train, axis = 0)
 
         # Calculating standard deviation for the input features column-wise.
-        X_std = np.std(X, axis = 0)
+        self.X_std = np.std(X_train, axis = 0)
 
         if printFlag:
-            print(f"Shape of X_mean: {X_mean.shape}")
-            print(f"Shape of X_std: {X_std.shape}")
-            print(f"Mean of X along columns is: {X_mean}")
-            print(f"Standard Deviation of X along columns is: {X_std}")
+            print("-----------------------------------------------------------------")
+            print(f"  Shape of X_mean: {self.X_mean.shape}")
+            print(f"  Shape of X_std: {self.X_std.shape}")
+            print(f"  Mean of X along columns is: {self.X_mean}")
+            print(f"  Standard Deviation of X along columns is: {self.X_std}")
+            
 
         # Subtract Mean from X (Brodcasting Takes place internally)
         # We can directly subtract mean from X
-        X = X - X_mean
+        X_train = X_train - self.X_mean
 
         # Divide X by X_std(Brodcasting Takes place internally)
         # We can directly divide X by X_std
-        X = X / X_std
+        X_train = X_train / self.X_std
 
         if printFlag:
-            print("Input Data, X has been Standardized successfully!")
+            print(f"  Input Train Data, X_train has been Standardized successfully!")
+            print("------------------------------------------------------------------")
 
-        return X
+        return X_train
+
+
+    def standardizeTestData(self, X_test):
+        # Subtract Mean from X (Brodcasting Takes place internally)
+        # We can directly subtract mean from X
+        X_test = X_test - self.X_mean
+
+        # Divide X by X_std(Brodcasting Takes place internally)
+        # We can directly divide X by X_std
+        X_test = X_test / self.X_std
+
+        print("----------------------------------------------------------------")
+        print(f"  Input Test Data, X_test has been Standardized successfully!")
+        print("----------------------------------------------------------------")
+
+        return X_test
+
 
 
     
@@ -264,7 +287,7 @@ class NearestMeansClassifier():
 
 
 
-    def classify(self, X):
+    def classify(self, X, sample_means):
 
         '''
         It takes the input numpy array of data points and predicts the labels f
@@ -285,7 +308,7 @@ class NearestMeansClassifier():
             # distance will have a length same as the # of classes (nc )
             distances = []
 
-            for mean in self.sample_means:
+            for mean in sample_means:
                 # If a data point is made up of 2 features then x.shape will be (2,).
                 euclidean_Dist = np.linalg.norm(x - mean)
                 distances.append(euclidean_Dist)
@@ -336,3 +359,114 @@ class NearestMeansClassifier():
         if percentageFlag:
             return (correctPredictions / totalPredictions) * 100
         return correctPredictions / totalPredictions
+
+
+    def featureTransformationTrain(self, X_train_std, n_train, T_train, datasetName, printFlag = False):
+
+        '''
+        Performs feature transformation on the Train Data by projecting it onto 40 (1x2) vectors and reduce the 
+        feature dimensions to (n_train x 1).
+
+        input -> standardized training data points (X_train), # of data points n_train, True labels vector, T_train and
+        datasetName which is either "dataset1" or "dataset2", etc.
+        '''
+        
+        CER_History = []
+        accuracy_History = []
+        
+        # m_star = 0
+        # rm_star = np.zeros((1,1))
+        # class_means_rm_star = np.zeros((1,1))
+        rm = np.zeros((40, 2))
+
+        for m in range(40):
+            if m < 10:
+                rm[m] = [10, m]
+            elif m >=10 and m < 30:
+                rm[m] = [20-m, 10]
+            else:
+                rm[m] = [-10, 40-m]
+
+        m = []
+        count = 0
+        minCer = float("inf")
+        for i, vec in enumerate(rm):
+
+            X_train_reduced = np.dot(X_train_std, vec.reshape(2, 1)) / np.dot(vec, vec)
+
+            # if count == 0:
+            #     print(X_train_reduced.shape)
+            #     print(X_train_reduced[0:50])
+            
+            class_means_reduced = self.calculateClassMeans(X=X_train_reduced, redFlag=True)
+            
+            if printFlag:
+                print("---------------------------------------------------")
+                print(f"  Shape of sample_means for {i, vec} of {datasetName}: {class_means_reduced.shape}")
+                print(f"  Sample Means for {vec}: ")
+                print(class_means_reduced)
+                print("---------------------------------------------------")
+
+
+            Y_hat_train_reduced = self.classify(X=X_train_reduced, sample_means=class_means_reduced)
+
+            CER_train_reduced = self.calculateCER(T=T_train, Y_hat=Y_hat_train_reduced, percentageFlag=True)
+            accuracy_train_reduced = self.calculateAccuracy(T=T_train, Y_hat=Y_hat_train_reduced, percentageFlag=True)
+
+
+            if CER_train_reduced < minCer:
+                self.m_star = i
+                self.rm_star = vec
+                self.class_means_rm_star = class_means_reduced
+                minCer = CER_train_reduced
+
+
+            CER_History.append(CER_train_reduced)
+            accuracy_History.append(accuracy_train_reduced)
+            
+            if printFlag:
+                print(f"Classification Error Rate for the set produced by {i, vec} for {datasetName} is: {CER_train_reduced}")
+                print(f"Accuracy for the set produced by {i, vec} for {datasetName} is: {accuracy_train_reduced}")
+            
+            m.append(count)
+            count += 1
+        print("----------------------------------------------------------------------------------")
+        print(f"  Feature Transformation: Feature reduction by Projection. has been successfully!")
+        print("----------------------------------------------------------------------------------")
+
+        return (m, CER_History, accuracy_History)
+
+
+    def featureTransformationTest(self, X_test_std, n_test, T_test):
+
+        '''
+        This function transforms the train data which is already standardized and reduces the dimensions of it 
+        by projecting it onto rm_star which is one of the vectors in the 40 vectors which produces the lowest amount
+        of Classification Error Rate(CER).
+
+        input -> Standardized test data, X_test_std
+        '''
+        X_test_reduced = np.dot(X_test_std, self.rm_star.reshape(2, 1)) / np.dot(self.rm_star, self.rm_star)
+
+
+        Y_hat_test_reduced = self.classify(X=X_test_reduced, sample_means=self.class_means_rm_star)
+
+        CER_test_reduced = self.calculateCER(T=T_test, Y_hat=Y_hat_test_reduced, percentageFlag=True)
+        accuracy_test_reduced = self.calculateAccuracy(T=T_test, Y_hat=Y_hat_test_reduced, percentageFlag=True)
+
+        return(CER_test_reduced, accuracy_test_reduced, X_test_reduced)
+
+
+    def plotTranformedTestData(self, X_test_reduced, T_test):
+
+        X_test_retrans = np.dot(X_test_reduced, self.rm_star.reshape(1,2))
+
+        class_means_rm_star_retrans = np.dot(self.class_means_rm_star, self.rm_star.reshape(1,2))
+
+        self.plotDecisionBoundaries(X_test_retrans, T_test, class_means_rm_star_retrans, fsize=(18, 18))
+
+
+
+
+
+        
