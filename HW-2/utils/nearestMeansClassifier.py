@@ -285,7 +285,7 @@ class NearestMeansClassifier():
 
         plt.show()
 
-    def plotDecBoundaries_2(self, training, label_train, sample_mean, fsize=(6,4),legend_on = False):
+    def plotDecisionBoundaries_2(self, training, label_train, sample_mean, fsize=(6,4),legend_on = False):
     
         '''
         Plot the decision boundaries and data points for minimum distance to
