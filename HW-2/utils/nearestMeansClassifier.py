@@ -119,6 +119,22 @@ class NearestMeansClassifier():
         return (X_test, n_test, T_test)
 
 
+    def generateTrainDataWith2Features(self, feature1, feature2, X_train, printFlag = False):
+        X_train_2features = X_train[:, [feature1-1, feature2-1]]
+        self.d = 2
+
+        if printFlag:
+            print("---------------------------------------------------")
+            print(f"  After retaining only 2 features [{feature1} and {feature2}]: ")
+            print(f"  Shape of X_train_2_features: {X_train_2features.shape}")
+            print(f"  Number of Data Points: {self.n}")
+            print(f"  Number of Input Features: {self.d}")
+            print(f"  Number of Target Classes: {self.nc}")
+            print("---------------------------------------------------")
+
+        return X_train_2features
+        
+
     def calculateClassMeans(self, X, redFlag = False):
 
         '''
