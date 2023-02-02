@@ -1,5 +1,5 @@
 ################################################
-## EE559 HW-1.
+## EE559 HW-2.
 ## Created by Sudesh Kumar Santhosh Kumar.
 ## Tested in Python 3.10.9 using conda environment version 22.9.0.
 ################################################
