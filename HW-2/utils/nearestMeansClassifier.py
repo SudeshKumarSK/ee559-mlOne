@@ -35,7 +35,9 @@ class NearestMeansClassifier():
         # All data-members of the class are declared and initialized below.
 
         self.d = 0  # d is the number of features in the input data(X).
-        self.n = 0  # n is the number of data points in the input data(X).
+        self.d_reduced = 0
+        self.n_train = 0  # n is the number of data points in the input data(X).
+        self.n_test = 0
         self.nc = 0 # nc is the number of classes in the target(t).
         self.X_mean = 0.0
         self.X_std = 0.0
@@ -62,8 +64,8 @@ class NearestMeansClassifier():
         # Storing the # of features in self.d calculated from the shape of input dataframe.
         self.d = data.shape[1] - 1
         
-        # Storing the # of data points in self.n calculated from the shape of input dataframe.
-        self.n = data.shape[0]
+        # Storing the # of data points in self.n_train calculated from the shape of input dataframe.
+        self.n_train = data.shape[0]
 
         # Sorting the input dataframe based on the target labels and generating a new dataframe data_sorted.
         data_sorted = data.sort_values(by=data.columns[-1])
@@ -90,12 +92,12 @@ class NearestMeansClassifier():
         if printFlag:
             print("---------------------------------------------------")
             print(f"  Shape of Input Data: {data_np.shape}")
-            print(f"  Number of Data Points: {self.n}")
+            print(f"  Number of Data Points: {self.n_train}")
             print(f"  Number of Input Features: {self.d}")
             print(f"  Number of Target Classes: {self.nc}")
             print("---------------------------------------------------")
         
-        return (X, self.n, T)
+        return (X, self.n_train, T)
 
     def transformTestData(self, test_data):
 
@@ -115,24 +117,25 @@ class NearestMeansClassifier():
         X_test = test_data_np[:, 0:self.d]
         T_test = test_data_np[:, -1]
         n_test = test_data_np.shape[0]
+        self.n_test = n_test
 
         return (X_test, n_test, T_test)
 
 
-    def generateTrainDataWith2Features(self, feature1, feature2, X_train, printFlag = False):
-        X_train_2features = X_train[:, [feature1-1, feature2-1]]
-        self.d = 2
+    def generateDataWith2Features(self, feature1, feature2, X, n, printFlag = False):
+        X_2features = X[:, [feature1-1, feature2-1]]
+        self.d_reduced = 2
 
         if printFlag:
             print("---------------------------------------------------")
             print(f"  After retaining only 2 features [{feature1} and {feature2}]: ")
-            print(f"  Shape of X_train_2_features: {X_train_2features.shape}")
-            print(f"  Number of Data Points: {self.n}")
-            print(f"  Number of Input Features: {self.d}")
+            print(f"  Shape of X_2_features: {X_2features.shape}")
+            print(f"  Number of Data Points: {n}")
+            print(f"  Number of Input Features: {self.d_reduced}")
             print(f"  Number of Target Classes: {self.nc}")
             print("---------------------------------------------------")
 
-        return X_train_2features
+        return X_2features
         
 
     def calculateClassMeans(self, X, redFlag = False):
@@ -145,7 +148,7 @@ class NearestMeansClassifier():
         
         '''
         if redFlag:
-            sample_means = np.zeros((self.nc, self.d - 1))
+            sample_means = np.zeros((self.nc, self.d_reduced))
 
         else:
             # Re-Initializing self.sample_means with zeros of shape (nc, d) [no. of classes x no. of features]
@@ -421,7 +424,7 @@ class NearestMeansClassifier():
         return Y_hat
 
 
-    def calculateCER(self, T, Y_hat, percentageFlag = False):
+    def calculateCER(self, T, Y_hat, trainTestFlag = "train", percentageFlag = False):
 
         '''
         Calculates the Classification Error Rate from the Target Vector(T) and Prediction Vector(Y_hat)
@@ -430,7 +433,14 @@ class NearestMeansClassifier():
         Output -> Classification Error Rate in float or percentage value.
         
         '''
-        totalPredictions = self.n
+
+        if trainTestFlag == "train":
+            totalPredictions = self.n_train
+
+        else:
+            totalPredictions = self.n_test
+
+
         incorrectPredictions = 0
 
         for i in range(len(Y_hat)):
@@ -443,7 +453,7 @@ class NearestMeansClassifier():
 
 
 
-    def calculateAccuracy(self, T, Y_hat, percentageFlag = False):
+    def calculateAccuracy(self, T, Y_hat, trainTestFlag = "train", percentageFlag = False):
 
         '''
         Calculates the Classifier's Accuracy from the Target Vector(T) and Prediction Vector(Y_hat)
@@ -453,7 +463,12 @@ class NearestMeansClassifier():
         
         '''
 
-        totalPredictions = self.n
+        if trainTestFlag == "train":
+            totalPredictions = self.n_train
+
+        else:
+            totalPredictions = self.n_test
+
         correctPredictions = 0
 
         for i in range(len(Y_hat)):
