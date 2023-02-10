@@ -56,10 +56,10 @@ class Perceptron():
         self.n_train = trainData.shape[0]
 
         # Sorting the input dataframe based on the target labels and generating a new dataframe data_sorted.
-        data_sorted = trainData.sort_values(by=trainData.columns[-1])
+        # data_sorted = trainData.sort_values(by=trainData.columns[-1]) 
 
         # Converting the sorted dataframe to numpy array.
-        train_data_np = data_sorted.to_numpy()
+        train_data_np = trainData.to_numpy()
 
         # Spliting the data_np into input features (X) and output target (T) basically splitting labels and features.
         X_train = train_data_np[:, 0:self.d]
@@ -111,11 +111,11 @@ class Perceptron():
         T_test = test_data_np[:, -1]
         n_test = test_data_np.shape[0]
 
-        return (X_test, n_test, T_test)
+        return (n_test, X_test, T_test)
 
 
 
-    def augmentTrainData(self, X):
+    def augmentData(self, X, n):
 
         '''
         Augments the input numpy data by adding a column of ones which is treated as x0.
@@ -125,7 +125,7 @@ class Perceptron():
 
         '''
 
-        X_augmented = np.hstack(( np.ones((self.n_train, 1)), X))
+        X_augmented = np.hstack((np.ones((n, 1)), X))
         
         return X_augmented
 
@@ -146,8 +146,8 @@ class Perceptron():
 
         T_changed = np.copy(T)
 
-        T_changed[T ==label_1] = -1.0
-        T_changed[T ==label_2] = 1.0
+        T_changed[T ==label_1] = 1.0
+        T_changed[T ==label_2] = -1.0
 
         return T_changed
 
@@ -165,12 +165,12 @@ class Perceptron():
         return w_vector
 
 
-    def shuffleTrainData(self, X_train, T_train):
+    def shuffleData(self, X, T):
 
         '''
         
         '''
-        combinedData = np.hstack((X_train, T_train))
+        combinedData = np.hstack((X, T))
         
         # Set seed for reproducibility
         np.random.seed(42)
@@ -184,35 +184,87 @@ class Perceptron():
 
         return (shuffled_data_points, shuffled_labels)
 
+    def computeCost(self, X_train, T_train, n_train, d, w_vector):
+        J = 0
 
-    def modelTrain_SequentialGD(self, n_train, X_train, T_train, w_vector, epochs = 10000, learn_rate = 1):
+        for i in range(n_train):
+            curr_loss = (w_vector.T @ X_train[i].reshape(d, 1)) * T_train[i]
+            curr_loss = np.squeeze(curr_loss)
+
+            if curr_loss < 0:
+                J = J + (curr_loss)
+
+        return -1*J
+
+
+    def modelTrain_SequentialGD(self, n_train, X_train, T_train, w_vector, epochs = 10, learn_rate = 1):
         '''
         
         '''
-        J_History = []
-        w_History = []
-        for m in range(epochs):
+        convergenceFlag = False
+        J_History_iterations = []
+        J_History_epochs= []
+        w_History_epochs = []
+        cer_History_iterations = []
+        cer_History_epochs = []
+
+        
+        n_iters_arr = [0]
+        n_epochs_arr = [0]
+
+        m = 0
+        n_iters = 1
+
+        d = X_train[0].shape[0]
+        J_i = self.computeCost(X_train=X_train, T_train=T_train, n_train=n_train, d=d, w_vector=w_vector)
+        J_History_iterations.append(J_i)
+        J_History_epochs.append(J_i)
+        w_History_epochs.append(w_vector)
+
+        Y_hat = self.predict(X=X_train, w_optimum=w_vector)
+        curr_cer = self.calculateCER(T=T_train, Y_hat=Y_hat, n=self.n_train)
+        cer_History_iterations.append(curr_cer)
+        cer_History_epochs.append(curr_cer)
+       
+        while  m < epochs:
+            n_epochs_arr.append(m+1)
             J_m = 0
+
             for n in range(n_train):
+                n_iters_arr.append(n_iters)
+
                 d = X_train[n].shape[0]
+                
                 curr_loss = w_vector.T @ X_train[n].reshape(d, 1) * T_train[n]
-
-                if curr_loss > 0:
-                    J_m = J_m + 0
-                    continue
-
-                else:
+                curr_loss = np.squeeze(curr_loss)
+    
+                if curr_loss < 0:
                     w_vector = w_vector - learn_rate*(-1 * X_train[n].reshape(d, 1) * T_train[n])
-                    J_m = J_m + -1 * curr_loss
-            
-            if J_m == 0:
-                break
+                
+                J_i = self.computeCost(X_train=X_train, T_train=T_train, n_train=n_train, d=d, w_vector=w_vector)
+                J_History_iterations.append(J_i)
 
-            J_History.append(J_m)
-            w_History.append(w_vector)
+                Y_hat = self.predict(X=X_train, w_optimum=w_vector)
+                curr_cer = self.calculateCER(T=T_train, Y_hat=Y_hat, n=self.n_train)
+                cer_History_iterations.append(curr_cer)
 
-        return (m, np.array(J_History), np.array(w_History))
+                if curr_cer == 0:
+                    convergenceFlag = True
+                    break
+                
+                n_iters += 1
 
+            J_m = J_i
+            J_History_epochs.append(J_m)
+            w_History_epochs.append(w_vector)
+            cer_History_epochs.append(curr_cer)
+
+            if convergenceFlag:
+                return (convergenceFlag, m+1, n_epochs_arr, n_iters, n_iters_arr, J_History_epochs, w_History_epochs, J_History_iterations, cer_History_epochs, cer_History_iterations)
+
+            m += 1
+  
+        return (convergenceFlag, m+1, n_epochs_arr, n_iters, n_iters_arr, J_History_epochs, w_History_epochs, J_History_iterations, cer_History_epochs, cer_History_iterations)
 
 
     def predict(self, X, w_optimum):
@@ -230,11 +282,7 @@ class Perceptron():
 
         Y_hat = Y_hat.T
 
-        for i in range(len(Y_hat)):
-            if Y_hat[i] < 0:
-                Y_hat[i] = self.classes[0]
-            else:
-                Y_hat[i] = self.classes[1]
+        Y_hat = np.sign(Y_hat)
 
         return Y_hat
 
@@ -279,4 +327,78 @@ class Perceptron():
         return (correctPredictions / totalPredictions) * 100
 
 
-        
+    def plotCriterionVsEpochs(self, n_epochs, J_History_epochs, J_optimum_epochs, datasetName):
+
+        ax = plt.axes()
+        ax.plot(n_epochs, J_History_epochs, c = "grey")
+
+
+        for i in range(len(n_epochs)):
+            if J_History_epochs[i] == J_optimum_epochs:
+                ax.scatter(i, J_History_epochs[i], c='purple', marker='o', s = 50, alpha=1)
+            else:
+                ax.scatter(i, J_History_epochs[i], c='orange', marker='o', s = 50, alpha=1)
+
+        ax.set_title("Criterion Function Vs. Number of Epochs " + "(" + datasetName + ")")
+        ax.set_ylabel('Criterion Function J(w)')
+        ax.set_xlabel('Number of Epochs')
+
+    plt.show()
+
+
+    def plotCriterionVsIters(self, n_iters, J_History_iters, J_optimum_iters, datasetName):
+
+        ax = plt.axes()
+        ax.plot(n_iters, J_History_iters, c = "grey")
+
+
+        for i in range(len(n_iters)):
+            if J_History_iters[i] == J_optimum_iters:
+                ax.scatter(i, J_History_iters[i], c='purple', marker='o', s = 50, alpha=1)
+            else:
+                ax.scatter(i, J_History_iters[i], c='orange', marker='o', s = 50, alpha=1)
+
+        ax.set_title("Criterion Function Vs. Number of Iterations " + "(" + datasetName + ")")
+        ax.set_ylabel('Criterion Function J(w)')
+        ax.set_xlabel('Number of Iterations')
+
+    plt.show()
+
+    def plotCERVsIters(self, n_iters, cer_History_iters, cer_optimum_iters, datasetName):
+
+        ax = plt.axes()
+        ax.plot(n_iters, cer_History_iters, c = "grey")
+
+
+        for i in range(len(n_iters)):
+            if cer_History_iters[i] == cer_optimum_iters:
+                ax.scatter(i, cer_History_iters[i], c='purple', marker='o', s = 50, alpha=1)
+            else:
+                ax.scatter(i, cer_History_iters[i], c='orange', marker='o', s = 50, alpha=1)
+
+        ax.set_title("Classification Error Rate Vs. Number of Iterations " + "(" + datasetName + ")")
+        ax.set_ylabel('Classification Error Rate (CER)')
+        ax.set_xlabel('Number of Iterations')
+
+    plt.show()
+
+
+    def plotCriterionVsEpochs(self, n_epochs, cer_History_epochs, cer_optimum_epochs, datasetName):
+
+        ax = plt.axes()
+        ax.plot(n_epochs, cer_History_epochs, c = "grey")
+
+
+        for i in range(len(n_epochs)):
+            if cer_History_epochs[i] == cer_optimum_epochs:
+                ax.scatter(i, cer_History_epochs[i], c='purple', marker='o', s = 50, alpha=1)
+            else:
+                ax.scatter(i, cer_History_epochs[i], c='orange', marker='o', s = 50, alpha=1)
+
+        ax.set_title("Classification Error Rate Vs. Number of Epochs " + "(" + datasetName + ")")
+        ax.set_ylabel('Classification Error Rate (CER)')
+        ax.set_xlabel('Number of Epochs')
+
+    plt.show()
+
+    
