@@ -12,15 +12,25 @@ from scipy.spatial.distance import cdist
 
 class Perceptron():
     '''
-    
-    
+        The main Perceptron class which contains all the member functions to perform Binary Classification.
+
+        The Perceptron Engine performs the following,
+            1. generating training data and labels from pandas dataframe.
+            2. generating augmented training data.
+            3. changing the labels of the training data to -1 and 1.
+            4. shuffling the training data and labels.
+            5. generating the initial weights and bias.
+            6. generating test data and test labels from pandas dataframe.
+            7. Perform the training process to learn the parameters.
+            8. Predict the labels from optimal weights.
+            9. Calculate Accuracy and CER.
     
     '''
 
     def __init__(self):
-        self.d = 0
-        self.n_train = 0
-        self.nc = 0
+        self.d = 0 # No of features in the input training data. (test data is also same).
+        self.n_train = 0 # No. of data points in the input training data.
+        self.nc = 0 # No. of classes in the training and test data. (Only 2 for perceptron)
         self.classes = np.zeros((1,)) # classes hold the different labels in the target(T).
         self.classIndices = np.zeros((1,)) # classIndices hold the index of where a labels starts in the sorted data (X)
 
@@ -145,6 +155,10 @@ class Perceptron():
     def initializeWeights(self, a):
 
         '''
+        Generates the weights(w) and bias(w0) as a whole numpy array based on the number of features in the training data, d.
+
+        Input -> a which is used to alter the values of the initial weights.
+        Output -> numpy array of weights(w) and bias (w0) as a whole, w_vector.
         
         '''
         w_vector = np.ones((self.d+1, 1))*a
@@ -152,6 +166,10 @@ class Perceptron():
 
 
     def shuffleTrainData(self, X_train, T_train):
+
+        '''
+        
+        '''
         combinedData = np.hstack((X_train, T_train))
         
         # Set seed for reproducibility
@@ -197,14 +215,18 @@ class Perceptron():
 
 
 
-    def predict(self, X, w_vector):
+    def predict(self, X, w_optimum):
 
         '''
-        
+        Predicts the output labels for the given numpy array of features, X and optimal w_vector learned during the training 
+        process.
+
+        Input -> numpy array of features, X and optimal w_vector, w_optimum.
+        Output -> numpy array of predicted labels, Y_hat.
         
         '''
 
-        Y_hat = w_vector.T @ X.T
+        Y_hat = w_optimum.T @ X.T
 
         Y_hat = Y_hat.T
 
