@@ -173,7 +173,7 @@ class Perceptron():
         combinedData = np.hstack((X, T))
         
         # Set seed for reproducibility
-        np.random.seed(42)
+        # np.random.seed(42)
 
         # Shuffle the combined array
         np.random.shuffle(combinedData)
@@ -266,6 +266,76 @@ class Perceptron():
   
         return (convergenceFlag, m+1, n_epochs_arr, n_iters, n_iters_arr, J_History_epochs, w_History_epochs, J_History_iterations, cer_History_epochs, cer_History_iterations)
 
+
+    def modelTrain_Stochastic_GD_Variant1(self, n_train, X_train, T_train, w_vector, epochs = 10, learn_rate = 1):
+        '''
+        
+        '''
+        convergenceFlag = False
+        J_History_iterations = []
+        J_History_epochs= []
+        w_History_epochs = []
+        cer_History_iterations = []
+        cer_History_epochs = []
+
+        
+        n_iters_arr = [0]
+        n_epochs_arr = [0]
+
+        m = 0
+        n_iters = 1
+
+        d = X_train[0].shape[0]
+        J_i = self.computeCost(X_train=X_train, T_train=T_train, n_train=n_train, d=d, w_vector=w_vector)
+        J_History_iterations.append(J_i)
+        J_History_epochs.append(J_i)
+        w_History_epochs.append(w_vector)
+
+        Y_hat = self.predict(X=X_train, w_optimum=w_vector)
+        curr_cer = self.calculateCER(T=T_train, Y_hat=Y_hat, n=self.n_train)
+        cer_History_iterations.append(curr_cer)
+        cer_History_epochs.append(curr_cer)
+       
+        while  m < epochs:
+            n_epochs_arr.append(m+1)
+            J_m = 0
+
+            for n in range(n_train):
+                n_iters_arr.append(n_iters)
+
+                d = X_train[n].shape[0]
+                
+                curr_loss = w_vector.T @ X_train[n].reshape(d, 1) * T_train[n]
+                curr_loss = np.squeeze(curr_loss)
+    
+                if curr_loss < 0:
+                    w_vector = w_vector - learn_rate*(-1 * X_train[n].reshape(d, 1) * T_train[n])
+                
+                J_i = self.computeCost(X_train=X_train, T_train=T_train, n_train=n_train, d=d, w_vector=w_vector)
+                J_History_iterations.append(J_i)
+
+                Y_hat = self.predict(X=X_train, w_optimum=w_vector)
+                curr_cer = self.calculateCER(T=T_train, Y_hat=Y_hat, n=self.n_train)
+                cer_History_iterations.append(curr_cer)
+
+                if curr_cer == 0:
+                    convergenceFlag = True
+                    break
+                
+                n_iters += 1
+
+            J_m = J_i
+            J_History_epochs.append(J_m)
+            w_History_epochs.append(w_vector)
+            cer_History_epochs.append(curr_cer)
+
+            if convergenceFlag:
+                return (convergenceFlag, m+1, n_epochs_arr, n_iters, n_iters_arr, J_History_epochs, w_History_epochs, J_History_iterations, cer_History_epochs, cer_History_iterations)
+            
+            
+            m += 1
+  
+        return (convergenceFlag, m+1, n_epochs_arr, n_iters, n_iters_arr, J_History_epochs, w_History_epochs, J_History_iterations, cer_History_epochs, cer_History_iterations)
 
     def predict(self, X, w_optimum):
 
