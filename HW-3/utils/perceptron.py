@@ -75,7 +75,7 @@ class Perceptron():
         self.classIndices = class_index
 
         # Storing the # of unique classes in self.nc calculated from the classes returned by np.unique().
-        self.nc_train = len(classes)
+        self.nc = len(classes)
 
         if printFlag:
             print("---------------------------------------------------")
@@ -113,6 +113,65 @@ class Perceptron():
 
         return (n_test, X_test, T_test)
 
+    def generateTrainDataNumpy(self, trainData, printFlag = True):
+
+        # Storing the # of features in self.d calculated from the shape of input dataframe.
+        self.d = trainData.shape[1] - 1
+        
+        # Storing the # of data points in self.n_train calculated from the shape of input dataframe.
+        self.n_train = trainData.shape[0]
+
+        # Sorting the input dataframe based on the target labels and generating a new dataframe data_sorted.
+        # data_sorted = trainData.sort_values(by=trainData.columns[-1]) 
+
+        # Spliting the data_np into input features (X) and output target (T) basically splitting labels and features.
+        X_train = trainData[:, 1:self.d+1]
+        T_train = trainData[:, 0]
+
+        # Finding the number of unique labels in the Target (T)
+        classes, class_index, class_count = np.unique(T_train, return_index=True, return_counts=True, axis=None)
+
+        # Storing the different types of classes (lables) in self.classes. For Eg, it can either be (0, 1) or (1, 2) or (1, 2, 3).
+        self.classes = classes
+
+        # Storing where the different labels start in the target (T). We will use this to compute the class means (or) sample means.
+        self.classIndices = class_index
+
+        # Storing the # of unique classes in self.nc calculated from the classes returned by np.unique().
+        self.nc = len(classes)
+
+        if printFlag:
+            print("---------------------------------------------------")
+            print(f"  Shape of Input Data: {trainData.shape}")
+            print(f"  Number of Data Points: {self.n_train}")
+            print(f"  Number of Input Features: {self.d}")
+            print(f"  Number of Target Classes: {self.nc}")
+            print("---------------------------------------------------")
+
+
+        return (self.n_train, X_train, T_train)
+
+
+    def generateTestDataNumy(self, test_data):
+
+        '''
+        Transforms the test_data pandas dataframe into numpy array and splits it into features and true labels.
+
+        Input -> test_data which is a pandas dataframe of testing data.
+        Output -> Tuple of input features of test data (X_test), # of features in the input data (n_test), 
+        True labels vector for test data (T_test)
+
+        (X_test, n_test, T_test).
+
+        '''
+
+        # Spliting the test_data_np into input features (X_test) and true labels vector (T_test) 
+        # basically splitting labels and features of the test_data.
+        X_test = test_data[:, 1:self.d+1]
+        T_test = test_data[:, 0]
+        n_test = test_data.shape[0]
+
+        return (n_test, X_test, T_test)
 
 
     def augmentData(self, X, n):
@@ -173,7 +232,7 @@ class Perceptron():
         combinedData = np.hstack((X, T))
         
         # Set seed for reproducibility
-        # np.random.seed(42)
+        np.random.seed(42)
 
         # Shuffle the combined array
         np.random.shuffle(combinedData)
@@ -209,22 +268,22 @@ class Perceptron():
         cer_History_epochs = []
 
         
-        n_iters_arr = [0]
-        n_epochs_arr = [0]
+        n_iters_arr = []
+        n_epochs_arr = []
 
         m = 0
         n_iters = 1
 
-        d = X_train[0].shape[0]
-        J_i = self.computeCost(X_train=X_train, T_train=T_train, n_train=n_train, d=d, w_vector=w_vector)
-        J_History_iterations.append(J_i)
-        J_History_epochs.append(J_i)
-        w_History_epochs.append(w_vector)
+        # d = X_train[0].shape[0]
+        # J_i = self.computeCost(X_train=X_train, T_train=T_train, n_train=n_train, d=d, w_vector=w_vector)
+        # J_History_iterations.append(J_i)
+        # J_History_epochs.append(J_i)
+        # w_History_epochs.append(w_vector)
 
-        Y_hat = self.predict(X=X_train, w_optimum=w_vector)
-        curr_cer = self.calculateCER(T=T_train, Y_hat=Y_hat, n=self.n_train)
-        cer_History_iterations.append(curr_cer)
-        cer_History_epochs.append(curr_cer)
+        # Y_hat = self.predict(X=X_train, w_optimum=w_vector)
+        # curr_cer = self.calculateCER(T=T_train, Y_hat=Y_hat, n=self.n_train)
+        # cer_History_iterations.append(curr_cer)
+        # cer_History_epochs.append(curr_cer)
        
         while  m < epochs:
             n_epochs_arr.append(m+1)
@@ -279,22 +338,22 @@ class Perceptron():
         cer_History_epochs = []
 
         
-        n_iters_arr = [0]
-        n_epochs_arr = [0]
+        n_iters_arr = []
+        n_epochs_arr = []
 
         m = 0
         n_iters = 1
 
-        d = X_train[0].shape[0]
-        J_i = self.computeCost(X_train=X_train, T_train=T_train, n_train=n_train, d=d, w_vector=w_vector)
-        J_History_iterations.append(J_i)
-        J_History_epochs.append(J_i)
-        w_History_epochs.append(w_vector)
+        # d = X_train[0].shape[0]
+        # J_i = self.computeCost(X_train=X_train, T_train=T_train, n_train=n_train, d=d, w_vector=w_vector)
+        # J_History_iterations.append(J_i)
+        # J_History_epochs.append(J_i)
+        # w_History_epochs.append(w_vector)
 
-        Y_hat = self.predict(X=X_train, w_optimum=w_vector)
-        curr_cer = self.calculateCER(T=T_train, Y_hat=Y_hat, n=self.n_train)
-        cer_History_iterations.append(curr_cer)
-        cer_History_epochs.append(curr_cer)
+        # Y_hat = self.predict(X=X_train, w_optimum=w_vector)
+        # curr_cer = self.calculateCER(T=T_train, Y_hat=Y_hat, n=self.n_train)
+        # cer_History_iterations.append(curr_cer)
+        # cer_History_epochs.append(curr_cer)
        
         while  m < epochs:
             n_epochs_arr.append(m+1)
@@ -332,7 +391,7 @@ class Perceptron():
             if convergenceFlag:
                 return (convergenceFlag, m+1, n_epochs_arr, n_iters, n_iters_arr, J_History_epochs, w_History_epochs, J_History_iterations, cer_History_epochs, cer_History_iterations)
             
-            
+            X_train, T_train = self.shuffleData(X=X_train, T=T_train)
             m += 1
   
         return (convergenceFlag, m+1, n_epochs_arr, n_iters, n_iters_arr, J_History_epochs, w_History_epochs, J_History_iterations, cer_History_epochs, cer_History_iterations)
@@ -397,36 +456,17 @@ class Perceptron():
         return (correctPredictions / totalPredictions) * 100
 
 
-    def plotCriterionVsEpochs(self, n_epochs, J_History_epochs, J_optimum_epochs, datasetName):
-
-        ax = plt.axes()
-        ax.plot(n_epochs, J_History_epochs, c = "grey")
-
-
-        for i in range(len(n_epochs)):
-            if J_History_epochs[i] == J_optimum_epochs:
-                ax.scatter(i, J_History_epochs[i], c='purple', marker='o', s = 50, alpha=1)
-            else:
-                ax.scatter(i, J_History_epochs[i], c='orange', marker='o', s = 50, alpha=1)
-
-        ax.set_title("Criterion Function Vs. Number of Epochs " + "(" + datasetName + ")")
-        ax.set_ylabel('Criterion Function J(w)')
-        ax.set_xlabel('Number of Epochs')
-
-    plt.show()
-
-
     def plotCriterionVsIters(self, n_iters, J_History_iters, J_optimum_iters, datasetName):
 
         ax = plt.axes()
         ax.plot(n_iters, J_History_iters, c = "grey")
 
 
-        for i in range(len(n_iters)):
+        for i, n in enumerate(n_iters):
             if J_History_iters[i] == J_optimum_iters:
-                ax.scatter(i, J_History_iters[i], c='purple', marker='o', s = 50, alpha=1)
+                ax.scatter(n, J_History_iters[i], c='purple', marker='o', s = 50, alpha=1)
             else:
-                ax.scatter(i, J_History_iters[i], c='orange', marker='o', s = 50, alpha=1)
+                ax.scatter(n, J_History_iters[i], c='orange', marker='o', s = 50, alpha=1)
 
         ax.set_title("Criterion Function Vs. Number of Iterations " + "(" + datasetName + ")")
         ax.set_ylabel('Criterion Function J(w)')
@@ -440,11 +480,11 @@ class Perceptron():
         ax.plot(n_iters, cer_History_iters, c = "grey")
 
 
-        for i in range(len(n_iters)):
+        for i, n in enumerate(n_iters):
             if cer_History_iters[i] == cer_optimum_iters:
-                ax.scatter(i, cer_History_iters[i], c='purple', marker='o', s = 50, alpha=1)
+                ax.scatter(n, cer_History_iters[i], c='purple', marker='o', s = 50, alpha=1)
             else:
-                ax.scatter(i, cer_History_iters[i], c='orange', marker='o', s = 50, alpha=1)
+                ax.scatter(n, cer_History_iters[i], c='orange', marker='o', s = 50, alpha=1)
 
         ax.set_title("Classification Error Rate Vs. Number of Iterations " + "(" + datasetName + ")")
         ax.set_ylabel('Classification Error Rate (CER)')
@@ -453,17 +493,40 @@ class Perceptron():
     plt.show()
 
 
-    def plotCriterionVsEpochs(self, n_epochs, cer_History_epochs, cer_optimum_epochs, datasetName):
+
+
+
+
+    def plotCriterionVsEpochs(self, n_epochs, J_History_epochs, J_optimum_epochs, datasetName):
+
+        ax = plt.axes()
+        ax.plot(n_epochs, J_History_epochs, c = "grey")
+
+
+        for i, n in enumerate(n_epochs):
+            if J_History_epochs[i] == J_optimum_epochs:
+                ax.scatter(n, J_History_epochs[i], c='purple', marker='o', s = 50, alpha=1)
+            else:
+                ax.scatter(n, J_History_epochs[i], c='orange', marker='o', s = 50, alpha=1)
+
+        ax.set_title("Criterion Function Vs. Number of Epochs " + "(" + datasetName + ")")
+        ax.set_ylabel('Criterion Function J(w)')
+        ax.set_xlabel('Number of Epochs')
+
+    plt.show()
+
+
+    def plotCERVsEpochs(self, n_epochs, cer_History_epochs, cer_optimum_epochs, datasetName):
 
         ax = plt.axes()
         ax.plot(n_epochs, cer_History_epochs, c = "grey")
 
 
-        for i in range(len(n_epochs)):
+        for i, n in enumerate(n_epochs):
             if cer_History_epochs[i] == cer_optimum_epochs:
-                ax.scatter(i, cer_History_epochs[i], c='purple', marker='o', s = 50, alpha=1)
+                ax.scatter(n, cer_History_epochs[i], c='purple', marker='o', s = 50, alpha=1)
             else:
-                ax.scatter(i, cer_History_epochs[i], c='orange', marker='o', s = 50, alpha=1)
+                ax.scatter(n, cer_History_epochs[i], c='orange', marker='o', s = 50, alpha=1)
 
         ax.set_title("Classification Error Rate Vs. Number of Epochs " + "(" + datasetName + ")")
         ax.set_ylabel('Classification Error Rate (CER)')
@@ -471,4 +534,74 @@ class Perceptron():
 
     plt.show()
 
-    
+
+    def plotDecisionBoundary(self, data, w_vector, datasetName):
+
+        ax = plt.axes()
+        features = data[:,0:self.d]
+        labels = data[:,-1]
+
+        x_min, x_max = np.ceil(max(features[:, 0])) + 1, np.floor(min(features[:, 0])) - 1
+        y_min, y_max = np.ceil(max(features[:, 1])) + 1, np.floor(min(features[:, 1])) - 1
+
+        x, y = np.meshgrid(np.linspace(x_min, x_max, 100), np.linspace(y_min, y_max, 100))
+
+        z = w_vector[0] + w_vector[1] * x + w_vector[2] * y
+
+        ax.contour(x, y, z, [0], c="purple")
+
+        ax.scatter(data[data[:, -1] == 1, 0], data[data[:, -1] == 1, 1])
+        ax.scatter(data[data[:, -1] == -1, 0], data[data[:, -1] == -1, 1])
+
+        class1 = data[data[:, -1] == 1, 0:1]
+
+        ax.set_title("Plot of Data Points " + "(" + datasetName + ")")
+        ax.set_ylabel('Feature 2 (X2)')
+        ax.set_xlabel('Feature 2 (X1)')
+
+
+        plt.show()
+
+
+    def plotHistogram(self, X, T, w_vector, n_train):
+        w_optimum_l2 = np.linalg.norm(w_vector)
+
+        distances_datapoints = []
+        distances_datapoints_class1 = []
+        distances_datapoints_class2 = []
+
+        for i in range(n_train):
+            curr_dist = w_vector.T @ X[i].T / w_optimum_l2
+            distances_datapoints.append(np.squeeze(curr_dist))
+
+
+        X_train_augmented_bc_class1 = X[T == 1.0]
+        for i in range(X_train_augmented_bc_class1.shape[0]):
+            curr_dist = w_vector.T @ X_train_augmented_bc_class1[i].T / w_optimum_l2
+            distances_datapoints_class1.append(np.squeeze(curr_dist))
+
+        X_train_augmented_bc_class2 = X[T == -1.0]
+        for i in range(X_train_augmented_bc_class2.shape[0]):
+            curr_dist = w_vector.T @ X_train_augmented_bc_class2[i].T / w_optimum_l2
+            distances_datapoints_class2.append(np.squeeze(curr_dist))
+
+
+        ax = plt.axes()
+        ax.hist(distances_datapoints, rwidth=0.95, color="#658864", alpha = 0.90, label = "All Datapoints")
+        ax.hist(distances_datapoints_class1, rwidth=0.70, color="#820000", alpha = 0.75, label = "Class 1")
+        ax.hist(distances_datapoints_class2, rwidth=0.70, color="#00337C", alpha = 0.75, label = "Class 2")
+
+        ax.set_title("Histogram of G(X) / ||w||")
+        ax.set_ylabel('Frequency')
+        ax.set_xlabel('G(x) / ||w||')
+
+        ax.legend()
+        
+        plt.show()
+
+        
+
+        
+
+
+        
