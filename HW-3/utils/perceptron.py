@@ -152,7 +152,7 @@ class Perceptron():
         return (self.n_train, X_train, T_train)
 
 
-    def generateTestDataNumy(self, test_data):
+    def generateTestDataNumpy(self, test_data):
 
         '''
         Transforms the test_data pandas dataframe into numpy array and splits it into features and true labels.
@@ -232,7 +232,7 @@ class Perceptron():
         combinedData = np.hstack((X, T))
         
         # Set seed for reproducibility
-        # np.random.seed(42)
+        np.random.seed(42)
 
         # Shuffle the combined array
         np.random.shuffle(combinedData)
