@@ -9,7 +9,8 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.preprocessing import PolynomialFeatures
-from sklearn.linear_model import LinearRegression
+from sklearn.linear_model import LinearRegression, Ridge
+
 
 class Regressor():
 
@@ -137,8 +138,20 @@ class Regressor():
 
         w_vector = model.coef_
 
-        print("Training Process Completed Successfully!")
         return (model, w_vector)
+    
+
+    def modelTrain_Regularization(self, X_train, T_train, lambd_a):
+
+        LR_Regularized = Ridge(alpha = lambd_a, fit_intercept = False)
+
+        model_R = LR_Regularized.fit(X_train, T_train)
+        # LR_Regularized.fit(X_train, T_train)
+
+        w_vector =  model_R.coef_
+
+        print(f"Training Process with Regularization, lambda = {lambd_a} Completed Successfully!")
+        return (model_R, w_vector)
     
 
     def predictTrain(self, X, T, n, p, model, datasetName, printFlag = False):
@@ -171,7 +184,7 @@ class Regressor():
         if printFlag:
             print("------------------------------------------------------------------------------------------")
             print(f"p = {p}")
-            print(f"Accuracy on the {datasetName} for p -> {p} is: {acc} ")
+            print(f"Accuracy on the {datasetName} for p -> {p} is: {acc}%")
             print("------------------------------------------------------------------------------------------")
 
 
@@ -179,14 +192,33 @@ class Regressor():
     
     
     def computeCost(self, T_train, Y_hat):
-        mse = np.square(np.subtract(T_train, Y_hat))
+        mse = np.square(np.subtract(T_train, Y_hat)) 
 
         cost = np.mean(mse)
 
         return cost
     
 
-    def plotGraphAcc(self, train_Accuracy_History, test_Accuracy_History):
+    def computeCostRegularized(self, T_train, Y_hat, lambd_a, model):
+        mse = np.square(np.subtract(T_train, Y_hat)) + (lambd_a*np.linalg.norm(model.coef_)**2)
+
+        cost = np.mean(mse)
+
+        return cost
+    
+
+    def printAccuracy(self, accuracyTrain, accuracyTest, p):
+        print("----------------------------------------------------------------------------------------------------------------")
+        print(f"Accuracy on the Training Set for p - {p}: ")
+        print(accuracyTrain)
+        print(f"Accuracy on the Test Set for p - {p}: ")
+        print(accuracyTest)
+        print("----------------------------------------------------------------------------------------------------------------")
+
+
+    
+
+    def plotAccuracy(self, train_Accuracy_History, test_Accuracy_History):
         ax = plt.axes()
         ax.plot([p for p in range(1, 8)], train_Accuracy_History, color = "#804674")
         ax.plot([p for p in range(1, 8)], test_Accuracy_History, color = "#609966")
@@ -200,6 +232,31 @@ class Regressor():
         ax.legend(["Train Accuracy", "Test Accuracy"], loc = 0, frameon = True)
         plt.show()
 
+
+
+    def plotAccuracyRegularized(self, lambda_list, train_Accuracy_All, test_Accuracy_All):
+        
+
+        # Create the subplots
+        fig, axs = plt.subplots(2, 3, figsize=(18, 10))
+
+
+        # Iterate over the subplots and plot the data 
+        for i, ax in enumerate(axs.flat):
+            ax.plot([p for p in range(1, 8)], train_Accuracy_All[i], label="Train Accuracy", color = "#804674")
+            ax.plot([p for p in range(1, 8)], test_Accuracy_All[i], label="Test Accuracy", color = "#609966")
+
+            ax.scatter([p for p in range(1, 8)], train_Accuracy_All[i], color = "#804674", marker='o', s = 30, alpha=1)
+            ax.scatter([p for p in range(1, 8)], test_Accuracy_All[i], color = "#609966", marker='o', s = 30, alpha=1)
+
+            ax.set_ylabel('Accuracy (in Percentage %)')
+            ax.set_xlabel('Degree (p)')
+            ax.set_title(f"Accuracy Vs. p for lambda = {lambda_list[i]}")
+            ax.legend()
+
+        # Show the plot
+        plt.show()
+        
 
     def plotCost(self, J_History):
 
@@ -217,6 +274,51 @@ class Regressor():
         plt.show()
 
 
+    def plotCostRegularized(self, lambda_list, J_All):
+        # Create the subplots
+        fig, axs = plt.subplots(2, 3, figsize=(18, 10))
+
+
+        # Iterate over the subplots and plot the data 
+        for i, ax in enumerate(axs.flat):
+            ax.plot([p for p in range(1, 8)], J_All[i], label="Train Accuracy", color = "#804674")
+            
+
+            ax.scatter([p for p in range(1, 8)], J_All[i], color = "#804674", marker='o', s = 30, alpha=1)
+
+            ax.set_ylabel('Cost - JMSE')
+            ax.set_xlabel('Degree (p)')
+            ax.set_title(f"JMSE Vs. p for lambda = {lambda_list[i]}")
+            ax.legend(["Cost JMSE"], loc = 0, frameon = True)
+
+        # Show the plot
+        plt.show()
+        
+
+    def plotTestAccuracyVsLambda(self, lambda_List, test_Accuracy_All):
+        
+
+        lambda_List = np.log10(lambda_List)
+
+        lambda_List = np.insert(lambda_List, 0, -1)
+
+        print(lambda_List)
+
+        ax = plt.axes()
+        ax.plot(lambda_List, test_Accuracy_All[0], color = "#00A8B5")
+        ax.plot(lambda_List, test_Accuracy_All[1], color = "#774898")
+        ax.plot(lambda_List, test_Accuracy_All[2], color = "#DE4383")
+        ax.plot(lambda_List, test_Accuracy_All[3], color = "#F3AE4B")
+        
+        ax.scatter(lambda_List, test_Accuracy_All[0], color = "#00A8B5", marker='o', s = 30, alpha=1)
+        ax.scatter(lambda_List,test_Accuracy_All[1], color = "#774898", marker='o', s = 30, alpha=1)
+        ax.scatter(lambda_List, test_Accuracy_All[2], color = "#DE4383", marker='o', s = 30, alpha=1)
+        ax.scatter(lambda_List, test_Accuracy_All[3], color = "#F3AE4B", marker='o', s = 30, alpha=1)        
+
+        ax.set_title("Accuracy Vs. log(lambda)")
+        ax.set_ylabel('Accuracy (in Percentage %)')
+        ax.set_xlabel('log(lambda)')
+        plt.show()
 
 
     def plotNonLinear(self, X_train, T_train, degree, model):
@@ -224,10 +326,9 @@ class Regressor():
         poly = PolynomialFeatures(degree = degree, include_bias = True)
 
         non_linear_trans = lambda x : poly.fit_transform(x)
-        predictor = lambda x : np.where(model.predict(x) >= 0.0, 0.0, 1.0)
+        predictor = lambda x : np.where(model.predict(x) >= 0.0, 0.0, 1.0)                                                                      
 
         self.plotDecBoundaries_Nonlinear(X_train, T_train, non_linear_trans, predictor, fsize=(10,8), legend_on=True)
-
 
 
 
@@ -322,6 +423,7 @@ class Regressor():
         plt.show()
 
 
+    
     
     
 
