@@ -1,0 +1,1110 @@
+Epoch 1, Training Loss: 0.5535715222358704, Training Accuracy: 80.32500457763672, Validation Loss: 0.4823920428752899, Validation Accuracy: 82.78333282470703
+Model saved for EPOCH: 1 at ITERATION: 1 with Validation Accuracy: 82.78333282470703%
+Highest Accuracy so far: 82.78333282470703% at EPOCH: 1 in ITERATION: 1
+
+Epoch 2, Training Loss: 0.40794727206230164, Training Accuracy: 85.16458129882812, Validation Loss: 0.4017268121242523, Validation Accuracy: 85.4749984741211
+Model saved for EPOCH: 2 at ITERATION: 1 with Validation Accuracy: 85.4749984741211%
+Highest Accuracy so far: 85.4749984741211% at EPOCH: 2 in ITERATION: 1
+
+Epoch 3, Training Loss: 0.36746424436569214, Training Accuracy: 86.64583587646484, Validation Loss: 0.3701515197753906, Validation Accuracy: 86.69166564941406
+Model saved for EPOCH: 3 at ITERATION: 1 with Validation Accuracy: 86.69166564941406%
+Highest Accuracy so far: 86.69166564941406% at EPOCH: 3 in ITERATION: 1
+
+Epoch 4, Training Loss: 0.341843843460083, Training Accuracy: 87.62291717529297, Validation Loss: 0.36208245158195496, Validation Accuracy: 87.06666564941406
+Model saved for EPOCH: 4 at ITERATION: 1 with Validation Accuracy: 87.06666564941406%
+Highest Accuracy so far: 87.06666564941406% at EPOCH: 4 in ITERATION: 1
+
+Epoch 5, Training Loss: 0.32230329513549805, Training Accuracy: 88.3062515258789, Validation Loss: 0.3526943027973175, Validation Accuracy: 87.55000305175781
+Model saved for EPOCH: 5 at ITERATION: 1 with Validation Accuracy: 87.55000305175781%
+Highest Accuracy so far: 87.55000305175781% at EPOCH: 5 in ITERATION: 1
+
+Epoch 6, Training Loss: 0.3061361014842987, Training Accuracy: 88.86041259765625, Validation Loss: 0.34749093651771545, Validation Accuracy: 87.5250015258789
+
+Epoch 7, Training Loss: 0.29265186190605164, Training Accuracy: 89.34583282470703, Validation Loss: 0.3426678776741028, Validation Accuracy: 87.7750015258789
+Model saved for EPOCH: 7 at ITERATION: 1 with Validation Accuracy: 87.7750015258789%
+Highest Accuracy so far: 87.7750015258789% at EPOCH: 7 in ITERATION: 1
+
+Epoch 8, Training Loss: 0.28114110231399536, Training Accuracy: 89.73332977294922, Validation Loss: 0.3364291489124298, Validation Accuracy: 88.02499389648438
+Model saved for EPOCH: 8 at ITERATION: 1 with Validation Accuracy: 88.02499389648438%
+Highest Accuracy so far: 88.02499389648438% at EPOCH: 8 in ITERATION: 1
+
+Epoch 9, Training Loss: 0.27067452669143677, Training Accuracy: 90.16458129882812, Validation Loss: 0.33186593651771545, Validation Accuracy: 88.41666412353516
+Model saved for EPOCH: 9 at ITERATION: 1 with Validation Accuracy: 88.41666412353516%
+Highest Accuracy so far: 88.41666412353516% at EPOCH: 9 in ITERATION: 1
+
+Epoch 10, Training Loss: 0.2610425353050232, Training Accuracy: 90.51667022705078, Validation Loss: 0.32901233434677124, Validation Accuracy: 88.39167022705078
+
+Epoch 11, Training Loss: 0.2524656653404236, Training Accuracy: 90.79582977294922, Validation Loss: 0.3261229991912842, Validation Accuracy: 88.60832977294922
+Model saved for EPOCH: 11 at ITERATION: 1 with Validation Accuracy: 88.60832977294922%
+Highest Accuracy so far: 88.60832977294922% at EPOCH: 11 in ITERATION: 1
+
+Epoch 12, Training Loss: 0.24438248574733734, Training Accuracy: 91.12708282470703, Validation Loss: 0.3259803354740143, Validation Accuracy: 88.54167175292969
+
+Epoch 13, Training Loss: 0.23631791770458221, Training Accuracy: 91.45416259765625, Validation Loss: 0.3209685981273651, Validation Accuracy: 88.9000015258789
+Model saved for EPOCH: 13 at ITERATION: 1 with Validation Accuracy: 88.9000015258789%
+Highest Accuracy so far: 88.9000015258789% at EPOCH: 13 in ITERATION: 1
+
+Epoch 14, Training Loss: 0.22959068417549133, Training Accuracy: 91.6937484741211, Validation Loss: 0.32361358404159546, Validation Accuracy: 88.60832977294922
+
+Epoch 15, Training Loss: 0.22326160967350006, Training Accuracy: 91.83541870117188, Validation Loss: 0.3265947103500366, Validation Accuracy: 88.73332977294922
+
+Epoch 16, Training Loss: 0.21685926616191864, Training Accuracy: 92.11042022705078, Validation Loss: 0.3229984939098358, Validation Accuracy: 88.73332977294922
+
+Epoch 17, Training Loss: 0.21143685281276703, Training Accuracy: 92.33333587646484, Validation Loss: 0.3251313269138336, Validation Accuracy: 88.82499694824219
+
+Epoch 18, Training Loss: 0.20492102205753326, Training Accuracy: 92.57707977294922, Validation Loss: 0.3309253454208374, Validation Accuracy: 88.68333435058594
+
+Epoch 19, Training Loss: 0.19931605458259583, Training Accuracy: 92.8062515258789, Validation Loss: 0.3284277617931366, Validation Accuracy: 88.61666870117188
+
+Epoch 20, Training Loss: 0.19354736804962158, Training Accuracy: 93.01042175292969, Validation Loss: 0.33623364567756653, Validation Accuracy: 88.63333129882812
+
+Epoch 21, Training Loss: 0.1887614130973816, Training Accuracy: 93.19166564941406, Validation Loss: 0.33995991945266724, Validation Accuracy: 88.64167022705078
+
+Epoch 22, Training Loss: 0.1842697113752365, Training Accuracy: 93.35208892822266, Validation Loss: 0.3385419547557831, Validation Accuracy: 88.6500015258789
+
+Epoch 23, Training Loss: 0.17853863537311554, Training Accuracy: 93.625, Validation Loss: 0.339924693107605, Validation Accuracy: 88.46666717529297
+
+Epoch 24, Training Loss: 0.17496179044246674, Training Accuracy: 93.65625, Validation Loss: 0.345608115196228, Validation Accuracy: 88.52499389648438
+
+Epoch 25, Training Loss: 0.17003194987773895, Training Accuracy: 93.93958282470703, Validation Loss: 0.3487972915172577, Validation Accuracy: 88.46666717529297
+
+Epoch 26, Training Loss: 0.1666484922170639, Training Accuracy: 93.99374389648438, Validation Loss: 0.3440304696559906, Validation Accuracy: 88.66666412353516
+
+Epoch 27, Training Loss: 0.16174356639385223, Training Accuracy: 94.27291870117188, Validation Loss: 0.34353604912757874, Validation Accuracy: 88.64167022705078
+
+Epoch 28, Training Loss: 0.15792201459407806, Training Accuracy: 94.34791564941406, Validation Loss: 0.34931933879852295, Validation Accuracy: 88.85833740234375
+
+Epoch 29, Training Loss: 0.1529374122619629, Training Accuracy: 94.56041717529297, Validation Loss: 0.3525441586971283, Validation Accuracy: 88.66666412353516
+
+Epoch 30, Training Loss: 0.15005964040756226, Training Accuracy: 94.63957977294922, Validation Loss: 0.3494419753551483, Validation Accuracy: 88.89167022705078
+
+Epoch 31, Training Loss: 0.14713433384895325, Training Accuracy: 94.73750305175781, Validation Loss: 0.35735195875167847, Validation Accuracy: 88.85833740234375
+
+Epoch 32, Training Loss: 0.14264391362667084, Training Accuracy: 94.95417022705078, Validation Loss: 0.3610881268978119, Validation Accuracy: 88.85833740234375
+
+Epoch 33, Training Loss: 0.13922983407974243, Training Accuracy: 95.03125, Validation Loss: 0.3730306029319763, Validation Accuracy: 88.49166870117188
+
+Epoch 34, Training Loss: 0.13663151860237122, Training Accuracy: 95.11250305175781, Validation Loss: 0.36662793159484863, Validation Accuracy: 88.42499542236328
+
+Epoch 35, Training Loss: 0.1329822838306427, Training Accuracy: 95.27291870117188, Validation Loss: 0.3701202869415283, Validation Accuracy: 88.55000305175781
+
+Epoch 36, Training Loss: 0.12981390953063965, Training Accuracy: 95.48125457763672, Validation Loss: 0.37332388758659363, Validation Accuracy: 88.80833435058594
+
+Epoch 37, Training Loss: 0.12719866633415222, Training Accuracy: 95.46875, Validation Loss: 0.3790411055088043, Validation Accuracy: 88.6500015258789
+
+Epoch 38, Training Loss: 0.12403129786252975, Training Accuracy: 95.70417022705078, Validation Loss: 0.38349446654319763, Validation Accuracy: 88.71666717529297
+
+Epoch 39, Training Loss: 0.12151682376861572, Training Accuracy: 95.72291564941406, Validation Loss: 0.3857294023036957, Validation Accuracy: 88.56666564941406
+
+Epoch 40, Training Loss: 0.11824004352092743, Training Accuracy: 95.92292022705078, Validation Loss: 0.39470174908638, Validation Accuracy: 88.50833129882812
+
+Epoch 41, Training Loss: 0.11702515929937363, Training Accuracy: 95.87083435058594, Validation Loss: 0.40155354142189026, Validation Accuracy: 88.59166717529297
+
+Epoch 42, Training Loss: 0.1141420528292656, Training Accuracy: 95.95624542236328, Validation Loss: 0.4044407904148102, Validation Accuracy: 88.41666412353516
+
+Epoch 43, Training Loss: 0.11113616824150085, Training Accuracy: 96.12291717529297, Validation Loss: 0.4132372736930847, Validation Accuracy: 88.42499542236328
+
+Epoch 44, Training Loss: 0.1087094396352768, Training Accuracy: 96.17499542236328, Validation Loss: 0.41481977701187134, Validation Accuracy: 88.29167175292969
+
+Epoch 45, Training Loss: 0.10583607852458954, Training Accuracy: 96.33125305175781, Validation Loss: 0.41787004470825195, Validation Accuracy: 88.36666870117188
+
+Epoch 46, Training Loss: 0.10537021607160568, Training Accuracy: 96.24166870117188, Validation Loss: 0.4295840561389923, Validation Accuracy: 88.45000457763672
+
+Epoch 47, Training Loss: 0.1014324352145195, Training Accuracy: 96.54374694824219, Validation Loss: 0.43442782759666443, Validation Accuracy: 88.42499542236328
+
+Epoch 48, Training Loss: 0.10023372620344162, Training Accuracy: 96.55208587646484, Validation Loss: 0.43558984994888306, Validation Accuracy: 88.25
+
+Epoch 49, Training Loss: 0.09864402562379837, Training Accuracy: 96.54374694824219, Validation Loss: 0.44735369086265564, Validation Accuracy: 88.21666717529297
+
+Epoch 50, Training Loss: 0.09703656286001205, Training Accuracy: 96.66874694824219, Validation Loss: 0.44316402077674866, Validation Accuracy: 88.32499694824219
+
+Epoch 51, Training Loss: 0.09719942510128021, Training Accuracy: 96.54582977294922, Validation Loss: 0.44970548152923584, Validation Accuracy: 88.31666564941406
+
+Epoch 52, Training Loss: 0.09140744060277939, Training Accuracy: 96.78333282470703, Validation Loss: 0.4565247893333435, Validation Accuracy: 88.29167175292969
+
+Epoch 53, Training Loss: 0.08974418044090271, Training Accuracy: 96.8499984741211, Validation Loss: 0.4668719470500946, Validation Accuracy: 88.21666717529297
+
+Epoch 54, Training Loss: 0.08865240216255188, Training Accuracy: 96.92500305175781, Validation Loss: 0.46622124314308167, Validation Accuracy: 88.16666412353516
+
+Epoch 55, Training Loss: 0.08705826848745346, Training Accuracy: 96.95417022705078, Validation Loss: 0.4717559814453125, Validation Accuracy: 88.5
+
+Epoch 56, Training Loss: 0.08771812170743942, Training Accuracy: 96.98958587646484, Validation Loss: 0.4752587378025055, Validation Accuracy: 88.30833435058594
+
+Epoch 57, Training Loss: 0.08379405736923218, Training Accuracy: 97.12708282470703, Validation Loss: 0.4753899872303009, Validation Accuracy: 88.34166717529297
+
+Epoch 58, Training Loss: 0.08221161365509033, Training Accuracy: 97.18333435058594, Validation Loss: 0.5004876255989075, Validation Accuracy: 88.18333435058594
+
+Epoch 59, Training Loss: 0.0830763578414917, Training Accuracy: 97.07291412353516, Validation Loss: 0.505882740020752, Validation Accuracy: 88.20000457763672
+
+Epoch 60, Training Loss: 0.07996002584695816, Training Accuracy: 97.11874389648438, Validation Loss: 0.5048944354057312, Validation Accuracy: 88.30000305175781
+
+Epoch 61, Training Loss: 0.07969465851783752, Training Accuracy: 97.13333129882812, Validation Loss: 0.495833158493042, Validation Accuracy: 88.21666717529297
+
+Epoch 62, Training Loss: 0.07606128603219986, Training Accuracy: 97.34375, Validation Loss: 0.49452799558639526, Validation Accuracy: 88.20833587646484
+
+Epoch 63, Training Loss: 0.07635295391082764, Training Accuracy: 97.30416870117188, Validation Loss: 0.5131012797355652, Validation Accuracy: 88.40833282470703
+
+Epoch 64, Training Loss: 0.0796339213848114, Training Accuracy: 97.15625, Validation Loss: 0.5103211402893066, Validation Accuracy: 88.20000457763672
+
+Epoch 65, Training Loss: 0.07709256559610367, Training Accuracy: 97.28958892822266, Validation Loss: 0.5132408142089844, Validation Accuracy: 88.4000015258789
+
+Epoch 66, Training Loss: 0.07341928780078888, Training Accuracy: 97.39791870117188, Validation Loss: 0.5092291235923767, Validation Accuracy: 88.34166717529297
+
+Epoch 67, Training Loss: 0.07114504277706146, Training Accuracy: 97.46458435058594, Validation Loss: 0.518119752407074, Validation Accuracy: 88.31666564941406
+
+Epoch 68, Training Loss: 0.06955618411302567, Training Accuracy: 97.54999542236328, Validation Loss: 0.5053209066390991, Validation Accuracy: 88.5999984741211
+
+Epoch 69, Training Loss: 0.06726602464914322, Training Accuracy: 97.62916564941406, Validation Loss: 0.5388363003730774, Validation Accuracy: 88.24166870117188
+
+Epoch 70, Training Loss: 0.0675167366862297, Training Accuracy: 97.6312484741211, Validation Loss: 0.5471580624580383, Validation Accuracy: 88.25
+
+Epoch 71, Training Loss: 0.0696423277258873, Training Accuracy: 97.53125, Validation Loss: 0.5460914969444275, Validation Accuracy: 88.18333435058594
+
+Epoch 72, Training Loss: 0.06558503210544586, Training Accuracy: 97.73958587646484, Validation Loss: 0.5547248125076294, Validation Accuracy: 88.19166564941406
+
+Epoch 73, Training Loss: 0.06476183980703354, Training Accuracy: 97.73749542236328, Validation Loss: 0.5803191661834717, Validation Accuracy: 87.75833129882812
+
+Epoch 74, Training Loss: 0.06675378978252411, Training Accuracy: 97.66874694824219, Validation Loss: 0.5569232702255249, Validation Accuracy: 88.26666259765625
+
+Epoch 75, Training Loss: 0.06632155179977417, Training Accuracy: 97.65416717529297, Validation Loss: 0.5914369225502014, Validation Accuracy: 87.98333740234375
+
+Epoch 76, Training Loss: 0.061540357768535614, Training Accuracy: 97.82083892822266, Validation Loss: 0.5679463744163513, Validation Accuracy: 87.94166564941406
+
+Epoch 77, Training Loss: 0.06059300899505615, Training Accuracy: 97.86458587646484, Validation Loss: 0.5975271463394165, Validation Accuracy: 87.82499694824219
+
+Epoch 78, Training Loss: 0.06064686179161072, Training Accuracy: 97.90833282470703, Validation Loss: 0.5638853311538696, Validation Accuracy: 88.38333129882812
+
+Epoch 79, Training Loss: 0.05953194573521614, Training Accuracy: 97.89166259765625, Validation Loss: 0.5949317812919617, Validation Accuracy: 88.11666107177734
+
+Epoch 80, Training Loss: 0.057515792548656464, Training Accuracy: 98.0, Validation Loss: 0.5924831628799438, Validation Accuracy: 87.99166870117188
+
+Epoch 81, Training Loss: 0.0586567223072052, Training Accuracy: 97.98332977294922, Validation Loss: 0.5698667168617249, Validation Accuracy: 88.125
+
+Epoch 82, Training Loss: 0.05548166483640671, Training Accuracy: 98.02291107177734, Validation Loss: 0.6054949760437012, Validation Accuracy: 88.0
+
+Epoch 83, Training Loss: 0.05600140988826752, Training Accuracy: 98.08541870117188, Validation Loss: 0.6046520471572876, Validation Accuracy: 88.25
+
+Epoch 84, Training Loss: 0.06318286806344986, Training Accuracy: 97.75, Validation Loss: 0.5906003713607788, Validation Accuracy: 88.45833587646484
+
+Epoch 85, Training Loss: 0.055776264518499374, Training Accuracy: 97.96458435058594, Validation Loss: 0.6423166394233704, Validation Accuracy: 87.69999694824219
+
+Epoch 86, Training Loss: 0.05497166886925697, Training Accuracy: 98.12708282470703, Validation Loss: 0.6285363435745239, Validation Accuracy: 87.9000015258789
+
+Epoch 87, Training Loss: 0.05312275141477585, Training Accuracy: 98.18958282470703, Validation Loss: 0.6417561769485474, Validation Accuracy: 87.74166870117188
+
+Epoch 88, Training Loss: 0.05485621094703674, Training Accuracy: 98.10832977294922, Validation Loss: 0.6192978024482727, Validation Accuracy: 87.9000015258789
+
+Epoch 89, Training Loss: 0.05427951738238335, Training Accuracy: 98.13541412353516, Validation Loss: 0.6454174518585205, Validation Accuracy: 87.84166717529297
+
+Epoch 90, Training Loss: 0.049908243119716644, Training Accuracy: 98.26041412353516, Validation Loss: 0.6518787145614624, Validation Accuracy: 87.9749984741211
+
+Epoch 91, Training Loss: 0.050910335034132004, Training Accuracy: 98.23541259765625, Validation Loss: 0.6387101411819458, Validation Accuracy: 87.79167175292969
+
+Epoch 92, Training Loss: 0.05264806002378464, Training Accuracy: 98.11666870117188, Validation Loss: 0.6605980396270752, Validation Accuracy: 87.79167175292969
+
+Epoch 93, Training Loss: 0.051089923828840256, Training Accuracy: 98.10208129882812, Validation Loss: 0.611704409122467, Validation Accuracy: 88.23333740234375
+
+Epoch 94, Training Loss: 0.04565545544028282, Training Accuracy: 98.45625305175781, Validation Loss: 0.6584885716438293, Validation Accuracy: 88.125
+
+Epoch 95, Training Loss: 0.04519489035010338, Training Accuracy: 98.37916564941406, Validation Loss: 0.6723537445068359, Validation Accuracy: 87.9749984741211
+
+Epoch 96, Training Loss: 0.04506354406476021, Training Accuracy: 98.46666717529297, Validation Loss: 0.6750982403755188, Validation Accuracy: 87.75
+
+Epoch 97, Training Loss: 0.043083660304546356, Training Accuracy: 98.51041412353516, Validation Loss: 0.6596067547798157, Validation Accuracy: 87.68333435058594
+
+Epoch 98, Training Loss: 0.047000519931316376, Training Accuracy: 98.29999542236328, Validation Loss: 0.6682628393173218, Validation Accuracy: 87.90833282470703
+
+Epoch 99, Training Loss: 0.045126862823963165, Training Accuracy: 98.47083282470703, Validation Loss: 0.6757737994194031, Validation Accuracy: 87.94166564941406
+
+Epoch 100, Training Loss: 0.04505707696080208, Training Accuracy: 98.40208435058594, Validation Loss: 0.7153720855712891, Validation Accuracy: 87.81666564941406
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Time taken to finish 100 epochs ===> 2655.5431339740753 secs
+
+Highest Validation Accuracy: 88.9000015258789% at Epoch: #13
+
+########################################################################################################################################################################################################
+Iteration ======> 2
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epoch 1, Training Loss: 0.5554246306419373, Training Accuracy: 80.43958282470703, Validation Loss: 0.44969800114631653, Validation Accuracy: 83.76667022705078
+Highest Accuracy so far: 83.76667022705078% at EPOCH: 1 in ITERATION: 2
+
+Epoch 2, Training Loss: 0.40975815057754517, Training Accuracy: 85.2249984741211, Validation Loss: 0.3981468379497528, Validation Accuracy: 85.67500305175781
+Highest Accuracy so far: 85.67500305175781% at EPOCH: 2 in ITERATION: 2
+
+Epoch 3, Training Loss: 0.3700452744960785, Training Accuracy: 86.56458282470703, Validation Loss: 0.3856024146080017, Validation Accuracy: 86.23333740234375
+Highest Accuracy so far: 86.23333740234375% at EPOCH: 3 in ITERATION: 2
+
+Epoch 4, Training Loss: 0.3434314727783203, Training Accuracy: 87.43333435058594, Validation Loss: 0.3631803095340729, Validation Accuracy: 86.97500610351562
+Highest Accuracy so far: 86.97500610351562% at EPOCH: 4 in ITERATION: 2
+
+Epoch 5, Training Loss: 0.32430025935173035, Training Accuracy: 88.06666564941406, Validation Loss: 0.3578352928161621, Validation Accuracy: 87.19999694824219
+Highest Accuracy so far: 87.19999694824219% at EPOCH: 5 in ITERATION: 2
+
+Epoch 6, Training Loss: 0.30876144766807556, Training Accuracy: 88.6875, Validation Loss: 0.34641507267951965, Validation Accuracy: 87.625
+Highest Accuracy so far: 87.625% at EPOCH: 6 in ITERATION: 2
+
+Epoch 7, Training Loss: 0.295312762260437, Training Accuracy: 89.1500015258789, Validation Loss: 0.34440878033638, Validation Accuracy: 87.75833129882812
+Highest Accuracy so far: 87.75833129882812% at EPOCH: 7 in ITERATION: 2
+
+Epoch 8, Training Loss: 0.2834780812263489, Training Accuracy: 89.57292175292969, Validation Loss: 0.3330349028110504, Validation Accuracy: 88.00833129882812
+Highest Accuracy so far: 88.00833129882812% at EPOCH: 8 in ITERATION: 2
+
+Epoch 9, Training Loss: 0.2728672921657562, Training Accuracy: 89.97291564941406, Validation Loss: 0.32715508341789246, Validation Accuracy: 88.50833129882812
+Highest Accuracy so far: 88.50833129882812% at EPOCH: 9 in ITERATION: 2
+
+Epoch 10, Training Loss: 0.26351258158683777, Training Accuracy: 90.27291870117188, Validation Loss: 0.3300657272338867, Validation Accuracy: 88.42499542236328
+
+Epoch 11, Training Loss: 0.254645973443985, Training Accuracy: 90.68958282470703, Validation Loss: 0.32126274704933167, Validation Accuracy: 88.68333435058594
+Highest Accuracy so far: 88.68333435058594% at EPOCH: 11 in ITERATION: 2
+
+Epoch 12, Training Loss: 0.2467508763074875, Training Accuracy: 90.97083282470703, Validation Loss: 0.32524290680885315, Validation Accuracy: 88.52499389648438
+
+Epoch 13, Training Loss: 0.23854486644268036, Training Accuracy: 91.26041412353516, Validation Loss: 0.3312946856021881, Validation Accuracy: 88.33333587646484
+
+Epoch 14, Training Loss: 0.23166215419769287, Training Accuracy: 91.49166870117188, Validation Loss: 0.331647127866745, Validation Accuracy: 88.375
+
+Epoch 15, Training Loss: 0.22428888082504272, Training Accuracy: 91.7437515258789, Validation Loss: 0.3291458189487457, Validation Accuracy: 88.5999984741211
+
+Epoch 16, Training Loss: 0.21815088391304016, Training Accuracy: 91.98750305175781, Validation Loss: 0.33203351497650146, Validation Accuracy: 88.44166564941406
+
+Epoch 17, Training Loss: 0.21191875636577606, Training Accuracy: 92.25833129882812, Validation Loss: 0.33202609419822693, Validation Accuracy: 88.40833282470703
+
+Epoch 18, Training Loss: 0.20644567906856537, Training Accuracy: 92.49166870117188, Validation Loss: 0.3378515839576721, Validation Accuracy: 88.43333435058594
+
+Epoch 19, Training Loss: 0.2007170468568802, Training Accuracy: 92.66458129882812, Validation Loss: 0.3509555757045746, Validation Accuracy: 88.4749984741211
+
+Epoch 20, Training Loss: 0.19524985551834106, Training Accuracy: 92.90208435058594, Validation Loss: 0.35270771384239197, Validation Accuracy: 88.375
+
+Epoch 21, Training Loss: 0.18932276964187622, Training Accuracy: 93.17500305175781, Validation Loss: 0.34126225113868713, Validation Accuracy: 88.58333587646484
+
+Epoch 22, Training Loss: 0.18383322656154633, Training Accuracy: 93.40416717529297, Validation Loss: 0.35043567419052124, Validation Accuracy: 88.5999984741211
+
+Epoch 23, Training Loss: 0.18009859323501587, Training Accuracy: 93.52291870117188, Validation Loss: 0.3502136170864105, Validation Accuracy: 88.59166717529297
+
+Epoch 24, Training Loss: 0.17491763830184937, Training Accuracy: 93.73333740234375, Validation Loss: 0.345916211605072, Validation Accuracy: 88.66666412353516
+
+Epoch 25, Training Loss: 0.17084206640720367, Training Accuracy: 93.9749984741211, Validation Loss: 0.3569951057434082, Validation Accuracy: 88.50833129882812
+
+Epoch 26, Training Loss: 0.16658952832221985, Training Accuracy: 94.08125305175781, Validation Loss: 0.3539210259914398, Validation Accuracy: 88.48333740234375
+
+Epoch 27, Training Loss: 0.16299566626548767, Training Accuracy: 94.25833129882812, Validation Loss: 0.3638822138309479, Validation Accuracy: 88.4749984741211
+
+Epoch 28, Training Loss: 0.1579952985048294, Training Accuracy: 94.37083435058594, Validation Loss: 0.36228320002555847, Validation Accuracy: 88.60832977294922
+
+Epoch 29, Training Loss: 0.15388303995132446, Training Accuracy: 94.53541564941406, Validation Loss: 0.3757460117340088, Validation Accuracy: 88.28333282470703
+
+Epoch 30, Training Loss: 0.15039576590061188, Training Accuracy: 94.67916870117188, Validation Loss: 0.3694600462913513, Validation Accuracy: 88.53333282470703
+
+Epoch 31, Training Loss: 0.14650791883468628, Training Accuracy: 94.83125305175781, Validation Loss: 0.3744170367717743, Validation Accuracy: 88.58333587646484
+
+Epoch 32, Training Loss: 0.14348569512367249, Training Accuracy: 95.0, Validation Loss: 0.3846476376056671, Validation Accuracy: 88.40833282470703
+
+Epoch 33, Training Loss: 0.13973772525787354, Training Accuracy: 95.1312484741211, Validation Loss: 0.3810631036758423, Validation Accuracy: 88.625
+
+Epoch 34, Training Loss: 0.13648764789104462, Training Accuracy: 95.1500015258789, Validation Loss: 0.3848949074745178, Validation Accuracy: 88.625
+
+Epoch 35, Training Loss: 0.13325698673725128, Training Accuracy: 95.3375015258789, Validation Loss: 0.38866621255874634, Validation Accuracy: 88.74166870117188
+Highest Accuracy so far: 88.74166870117188% at EPOCH: 35 in ITERATION: 2
+
+Epoch 36, Training Loss: 0.13012011349201202, Training Accuracy: 95.32708740234375, Validation Loss: 0.39769458770751953, Validation Accuracy: 88.56666564941406
+
+Epoch 37, Training Loss: 0.12650838494300842, Training Accuracy: 95.57083129882812, Validation Loss: 0.399848997592926, Validation Accuracy: 88.70000457763672
+
+Epoch 38, Training Loss: 0.12328870594501495, Training Accuracy: 95.65625, Validation Loss: 0.40197253227233887, Validation Accuracy: 88.40833282470703
+
+Epoch 39, Training Loss: 0.12154435366392136, Training Accuracy: 95.70833587646484, Validation Loss: 0.4088083505630493, Validation Accuracy: 88.41666412353516
+
+Epoch 40, Training Loss: 0.118280790746212, Training Accuracy: 95.77708435058594, Validation Loss: 0.4207458794116974, Validation Accuracy: 88.48333740234375
+
+Epoch 41, Training Loss: 0.11708725243806839, Training Accuracy: 95.85624694824219, Validation Loss: 0.4114738404750824, Validation Accuracy: 88.375
+
+Epoch 42, Training Loss: 0.11334579437971115, Training Accuracy: 96.01457977294922, Validation Loss: 0.41676685214042664, Validation Accuracy: 88.55000305175781
+
+Epoch 43, Training Loss: 0.10959643870592117, Training Accuracy: 96.17292022705078, Validation Loss: 0.4286687970161438, Validation Accuracy: 88.4000015258789
+
+Epoch 44, Training Loss: 0.1091095507144928, Training Accuracy: 96.14166259765625, Validation Loss: 0.427737832069397, Validation Accuracy: 88.54167175292969
+
+Epoch 45, Training Loss: 0.1061471626162529, Training Accuracy: 96.36666870117188, Validation Loss: 0.4452030062675476, Validation Accuracy: 88.07499694824219
+
+Epoch 46, Training Loss: 0.10496940463781357, Training Accuracy: 96.36666870117188, Validation Loss: 0.4393021762371063, Validation Accuracy: 88.41666412353516
+
+Epoch 47, Training Loss: 0.10270002484321594, Training Accuracy: 96.45833587646484, Validation Loss: 0.45533397793769836, Validation Accuracy: 88.28333282470703
+
+Epoch 48, Training Loss: 0.09878614544868469, Training Accuracy: 96.625, Validation Loss: 0.4664234519004822, Validation Accuracy: 88.2249984741211
+
+Epoch 49, Training Loss: 0.09846688061952591, Training Accuracy: 96.56458282470703, Validation Loss: 0.472246378660202, Validation Accuracy: 88.17499542236328
+
+Epoch 50, Training Loss: 0.0962773934006691, Training Accuracy: 96.68541717529297, Validation Loss: 0.4727334678173065, Validation Accuracy: 88.20000457763672
+
+Epoch 51, Training Loss: 0.09317696839570999, Training Accuracy: 96.80000305175781, Validation Loss: 0.48462092876434326, Validation Accuracy: 88.1500015258789
+
+Epoch 52, Training Loss: 0.09305452555418015, Training Accuracy: 96.87291717529297, Validation Loss: 0.4766346514225006, Validation Accuracy: 88.0
+
+Epoch 53, Training Loss: 0.09061652421951294, Training Accuracy: 96.92916870117188, Validation Loss: 0.4839382469654083, Validation Accuracy: 88.2249984741211
+
+Epoch 54, Training Loss: 0.08830057829618454, Training Accuracy: 97.05000305175781, Validation Loss: 0.5021942257881165, Validation Accuracy: 88.26666259765625
+
+Epoch 55, Training Loss: 0.08794230967760086, Training Accuracy: 96.93333435058594, Validation Loss: 0.49849241971969604, Validation Accuracy: 87.96666717529297
+
+Epoch 56, Training Loss: 0.08493119478225708, Training Accuracy: 97.12916564941406, Validation Loss: 0.5031709671020508, Validation Accuracy: 87.99166870117188
+
+Epoch 57, Training Loss: 0.08380765467882156, Training Accuracy: 97.18541717529297, Validation Loss: 0.5004637837409973, Validation Accuracy: 87.94166564941406
+
+Epoch 58, Training Loss: 0.0840161070227623, Training Accuracy: 97.06041717529297, Validation Loss: 0.5056895613670349, Validation Accuracy: 88.04167175292969
+
+Epoch 59, Training Loss: 0.08051162958145142, Training Accuracy: 97.2750015258789, Validation Loss: 0.5189586877822876, Validation Accuracy: 87.95833587646484
+
+Epoch 60, Training Loss: 0.08179154992103577, Training Accuracy: 97.14166259765625, Validation Loss: 0.5288366079330444, Validation Accuracy: 87.80833435058594
+
+Epoch 61, Training Loss: 0.0779012069106102, Training Accuracy: 97.32917022705078, Validation Loss: 0.5150100588798523, Validation Accuracy: 88.0999984741211
+
+Epoch 62, Training Loss: 0.07839374989271164, Training Accuracy: 97.3375015258789, Validation Loss: 0.5405396223068237, Validation Accuracy: 87.89167022705078
+
+Epoch 63, Training Loss: 0.07513971626758575, Training Accuracy: 97.45833587646484, Validation Loss: 0.5282586812973022, Validation Accuracy: 87.93333435058594
+
+Epoch 64, Training Loss: 0.0727851390838623, Training Accuracy: 97.50833129882812, Validation Loss: 0.5607385039329529, Validation Accuracy: 87.89167022705078
+
+Epoch 65, Training Loss: 0.07079598307609558, Training Accuracy: 97.61457824707031, Validation Loss: 0.5311715006828308, Validation Accuracy: 88.20833587646484
+
+Epoch 66, Training Loss: 0.07075972855091095, Training Accuracy: 97.63958740234375, Validation Loss: 0.5225750207901001, Validation Accuracy: 88.25
+
+Epoch 67, Training Loss: 0.07252923399209976, Training Accuracy: 97.56666564941406, Validation Loss: 0.5484628677368164, Validation Accuracy: 87.94999694824219
+
+Epoch 68, Training Loss: 0.06881112605333328, Training Accuracy: 97.66041564941406, Validation Loss: 0.5394155383110046, Validation Accuracy: 88.15833282470703
+
+Epoch 69, Training Loss: 0.06786329299211502, Training Accuracy: 97.65833282470703, Validation Loss: 0.5573036074638367, Validation Accuracy: 88.06666564941406
+
+Epoch 70, Training Loss: 0.0658271461725235, Training Accuracy: 97.72083282470703, Validation Loss: 0.5596133470535278, Validation Accuracy: 87.625
+
+Epoch 71, Training Loss: 0.0656653568148613, Training Accuracy: 97.71458435058594, Validation Loss: 0.5674623847007751, Validation Accuracy: 87.99166870117188
+
+Epoch 72, Training Loss: 0.06770645081996918, Training Accuracy: 97.63749694824219, Validation Loss: 0.5839453935623169, Validation Accuracy: 87.64167022705078
+
+Epoch 73, Training Loss: 0.06414695829153061, Training Accuracy: 97.80416870117188, Validation Loss: 0.5637779831886292, Validation Accuracy: 88.02499389648438
+
+Epoch 74, Training Loss: 0.0630849301815033, Training Accuracy: 97.79375457763672, Validation Loss: 0.5744127631187439, Validation Accuracy: 87.73333740234375
+
+Epoch 75, Training Loss: 0.06101304292678833, Training Accuracy: 97.87708282470703, Validation Loss: 0.601963996887207, Validation Accuracy: 87.86666107177734
+
+Epoch 76, Training Loss: 0.06508758664131165, Training Accuracy: 97.73332977294922, Validation Loss: 0.5901368856430054, Validation Accuracy: 88.08333587646484
+
+Epoch 77, Training Loss: 0.06355272233486176, Training Accuracy: 97.73332977294922, Validation Loss: 0.6526823043823242, Validation Accuracy: 87.28333282470703
+
+Epoch 78, Training Loss: 0.061219725757837296, Training Accuracy: 97.97291564941406, Validation Loss: 0.6291082501411438, Validation Accuracy: 87.69166564941406
+
+Epoch 79, Training Loss: 0.06207866966724396, Training Accuracy: 97.80208587646484, Validation Loss: 0.5887137651443481, Validation Accuracy: 88.08333587646484
+
+Epoch 80, Training Loss: 0.05493618920445442, Training Accuracy: 98.14791870117188, Validation Loss: 0.609180748462677, Validation Accuracy: 87.75
+
+Epoch 81, Training Loss: 0.05894038453698158, Training Accuracy: 97.94792175292969, Validation Loss: 0.6191461682319641, Validation Accuracy: 87.82499694824219
+
+Epoch 82, Training Loss: 0.0587565116584301, Training Accuracy: 97.91250610351562, Validation Loss: 0.6107989549636841, Validation Accuracy: 88.125
+
+Epoch 83, Training Loss: 0.055084265768527985, Training Accuracy: 98.0999984741211, Validation Loss: 0.6269536018371582, Validation Accuracy: 87.86666107177734
+
+Epoch 84, Training Loss: 0.05357439070940018, Training Accuracy: 98.1624984741211, Validation Loss: 0.61849045753479, Validation Accuracy: 87.79167175292969
+
+Epoch 85, Training Loss: 0.05766173452138901, Training Accuracy: 98.01457977294922, Validation Loss: 0.6060001254081726, Validation Accuracy: 88.02499389648438
+
+Epoch 86, Training Loss: 0.052269820123910904, Training Accuracy: 98.19792175292969, Validation Loss: 0.6302170753479004, Validation Accuracy: 87.81666564941406
+
+Epoch 87, Training Loss: 0.054196350276470184, Training Accuracy: 98.13749694824219, Validation Loss: 0.6475088596343994, Validation Accuracy: 87.86666107177734
+
+Epoch 88, Training Loss: 0.050186656415462494, Training Accuracy: 98.31666564941406, Validation Loss: 0.6320855021476746, Validation Accuracy: 88.125
+
+Epoch 89, Training Loss: 0.05028557404875755, Training Accuracy: 98.27708435058594, Validation Loss: 0.6497788429260254, Validation Accuracy: 88.18333435058594
+
+Epoch 90, Training Loss: 0.050574615597724915, Training Accuracy: 98.22708129882812, Validation Loss: 0.6659892797470093, Validation Accuracy: 88.01666259765625
+
+Epoch 91, Training Loss: 0.0485168881714344, Training Accuracy: 98.35208129882812, Validation Loss: 0.6827882528305054, Validation Accuracy: 87.84166717529297
+
+Epoch 92, Training Loss: 0.048494111746549606, Training Accuracy: 98.34583282470703, Validation Loss: 0.7219374179840088, Validation Accuracy: 87.71666717529297
+
+Epoch 93, Training Loss: 0.05156654864549637, Training Accuracy: 98.17707824707031, Validation Loss: 0.6479054093360901, Validation Accuracy: 87.73333740234375
+
+Epoch 94, Training Loss: 0.05045688897371292, Training Accuracy: 98.26041412353516, Validation Loss: 0.6937609910964966, Validation Accuracy: 87.91666412353516
+
+Epoch 95, Training Loss: 0.047975245863199234, Training Accuracy: 98.37083435058594, Validation Loss: 0.6871351003646851, Validation Accuracy: 87.76666259765625
+
+Epoch 96, Training Loss: 0.047568757086992264, Training Accuracy: 98.37083435058594, Validation Loss: 0.662622332572937, Validation Accuracy: 88.13333129882812
+
+Epoch 97, Training Loss: 0.045816924422979355, Training Accuracy: 98.45208740234375, Validation Loss: 0.6866493225097656, Validation Accuracy: 88.04167175292969
+
+Epoch 98, Training Loss: 0.04506658390164375, Training Accuracy: 98.35416412353516, Validation Loss: 0.6851593255996704, Validation Accuracy: 88.05833435058594
+
+Epoch 99, Training Loss: 0.04579419270157814, Training Accuracy: 98.38749694824219, Validation Loss: 0.6953623294830322, Validation Accuracy: 87.82499694824219
+
+Epoch 100, Training Loss: 0.041819434612989426, Training Accuracy: 98.56666564941406, Validation Loss: 0.696687638759613, Validation Accuracy: 88.07499694824219
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Time taken to finish 100 epochs ===> 2610.018372297287 secs
+
+Highest Validation Accuracy: 88.74166870117188% at Epoch: #35
+
+########################################################################################################################################################################################################
+Iteration ======> 3
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epoch 1, Training Loss: 0.5554563999176025, Training Accuracy: 80.20208740234375, Validation Loss: 0.4858318567276001, Validation Accuracy: 82.64167022705078
+Highest Accuracy so far: 82.64167022705078% at EPOCH: 1 in ITERATION: 3
+
+Epoch 2, Training Loss: 0.4089127480983734, Training Accuracy: 85.22708129882812, Validation Loss: 0.45183080434799194, Validation Accuracy: 83.70000457763672
+Highest Accuracy so far: 83.70000457763672% at EPOCH: 2 in ITERATION: 3
+
+Epoch 3, Training Loss: 0.3691944479942322, Training Accuracy: 86.66874694824219, Validation Loss: 0.371883749961853, Validation Accuracy: 86.5250015258789
+Highest Accuracy so far: 86.5250015258789% at EPOCH: 3 in ITERATION: 3
+
+Epoch 4, Training Loss: 0.3441931903362274, Training Accuracy: 87.55833435058594, Validation Loss: 0.36858487129211426, Validation Accuracy: 86.82500457763672
+Highest Accuracy so far: 86.82500457763672% at EPOCH: 4 in ITERATION: 3
+
+Epoch 5, Training Loss: 0.32502615451812744, Training Accuracy: 88.10624694824219, Validation Loss: 0.35749202966690063, Validation Accuracy: 87.4749984741211
+Highest Accuracy so far: 87.4749984741211% at EPOCH: 5 in ITERATION: 3
+
+Epoch 6, Training Loss: 0.30954545736312866, Training Accuracy: 88.69583892822266, Validation Loss: 0.3552357852458954, Validation Accuracy: 87.5250015258789
+Highest Accuracy so far: 87.5250015258789% at EPOCH: 6 in ITERATION: 3
+
+Epoch 7, Training Loss: 0.29590529203414917, Training Accuracy: 89.15416717529297, Validation Loss: 0.34747904539108276, Validation Accuracy: 87.76666259765625
+Highest Accuracy so far: 87.76666259765625% at EPOCH: 7 in ITERATION: 3
+
+Epoch 8, Training Loss: 0.2838577628135681, Training Accuracy: 89.63749694824219, Validation Loss: 0.3390270173549652, Validation Accuracy: 87.80000305175781
+Highest Accuracy so far: 87.80000305175781% at EPOCH: 8 in ITERATION: 3
+
+Epoch 9, Training Loss: 0.2733966112136841, Training Accuracy: 89.9375, Validation Loss: 0.34191638231277466, Validation Accuracy: 87.78333282470703
+
+Epoch 10, Training Loss: 0.2635796070098877, Training Accuracy: 90.25, Validation Loss: 0.33215633034706116, Validation Accuracy: 88.0
+Highest Accuracy so far: 88.0% at EPOCH: 10 in ITERATION: 3
+
+Epoch 11, Training Loss: 0.2546687126159668, Training Accuracy: 90.72291564941406, Validation Loss: 0.33099111914634705, Validation Accuracy: 88.25
+Highest Accuracy so far: 88.25% at EPOCH: 11 in ITERATION: 3
+
+Epoch 12, Training Loss: 0.24634188413619995, Training Accuracy: 90.9375, Validation Loss: 0.3274630606174469, Validation Accuracy: 88.45833587646484
+Highest Accuracy so far: 88.45833587646484% at EPOCH: 12 in ITERATION: 3
+
+Epoch 13, Training Loss: 0.2388252168893814, Training Accuracy: 91.37083435058594, Validation Loss: 0.3342025578022003, Validation Accuracy: 88.21666717529297
+
+Epoch 14, Training Loss: 0.23187603056430817, Training Accuracy: 91.60624694824219, Validation Loss: 0.3307989537715912, Validation Accuracy: 88.24166870117188
+
+Epoch 15, Training Loss: 0.22501564025878906, Training Accuracy: 91.8375015258789, Validation Loss: 0.3381190299987793, Validation Accuracy: 88.18333435058594
+
+Epoch 16, Training Loss: 0.21811527013778687, Training Accuracy: 92.11458587646484, Validation Loss: 0.33168211579322815, Validation Accuracy: 88.56666564941406
+Highest Accuracy so far: 88.56666564941406% at EPOCH: 16 in ITERATION: 3
+
+Epoch 17, Training Loss: 0.21188406646251678, Training Accuracy: 92.35625457763672, Validation Loss: 0.33796751499176025, Validation Accuracy: 88.4000015258789
+
+Epoch 18, Training Loss: 0.20570886135101318, Training Accuracy: 92.57707977294922, Validation Loss: 0.34178057312965393, Validation Accuracy: 88.24166870117188
+
+Epoch 19, Training Loss: 0.1994582563638687, Training Accuracy: 92.79374694824219, Validation Loss: 0.34413963556289673, Validation Accuracy: 88.20000457763672
+
+Epoch 20, Training Loss: 0.1943558007478714, Training Accuracy: 93.0250015258789, Validation Loss: 0.3464405834674835, Validation Accuracy: 88.32499694824219
+
+Epoch 21, Training Loss: 0.1890145242214203, Training Accuracy: 93.29582977294922, Validation Loss: 0.3489026427268982, Validation Accuracy: 88.2249984741211
+
+Epoch 22, Training Loss: 0.18395662307739258, Training Accuracy: 93.43333435058594, Validation Loss: 0.34428003430366516, Validation Accuracy: 88.4749984741211
+
+Epoch 23, Training Loss: 0.17887350916862488, Training Accuracy: 93.5562515258789, Validation Loss: 0.34648841619491577, Validation Accuracy: 88.40833282470703
+
+Epoch 24, Training Loss: 0.1739761084318161, Training Accuracy: 93.82917022705078, Validation Loss: 0.35440877079963684, Validation Accuracy: 88.125
+
+Epoch 25, Training Loss: 0.1705888956785202, Training Accuracy: 93.99374389648438, Validation Loss: 0.35903698205947876, Validation Accuracy: 88.25833129882812
+
+Epoch 26, Training Loss: 0.16597017645835876, Training Accuracy: 94.09166717529297, Validation Loss: 0.36113232374191284, Validation Accuracy: 88.1500015258789
+
+Epoch 27, Training Loss: 0.1615508496761322, Training Accuracy: 94.33333587646484, Validation Loss: 0.3631514012813568, Validation Accuracy: 88.33333587646484
+
+Epoch 28, Training Loss: 0.1572711020708084, Training Accuracy: 94.45207977294922, Validation Loss: 0.3732704222202301, Validation Accuracy: 87.75833129882812
+
+Epoch 29, Training Loss: 0.1537424772977829, Training Accuracy: 94.56666564941406, Validation Loss: 0.3689495325088501, Validation Accuracy: 88.33333587646484
+
+Epoch 30, Training Loss: 0.14989922940731049, Training Accuracy: 94.68333435058594, Validation Loss: 0.3814670741558075, Validation Accuracy: 87.65833282470703
+
+Epoch 31, Training Loss: 0.14502403140068054, Training Accuracy: 94.93958282470703, Validation Loss: 0.37856632471084595, Validation Accuracy: 87.99166870117188
+
+Epoch 32, Training Loss: 0.14176121354103088, Training Accuracy: 95.04167175292969, Validation Loss: 0.3806738555431366, Validation Accuracy: 88.19166564941406
+
+Epoch 33, Training Loss: 0.1379386931657791, Training Accuracy: 95.18541717529297, Validation Loss: 0.38839465379714966, Validation Accuracy: 88.21666717529297
+
+Epoch 34, Training Loss: 0.1360955536365509, Training Accuracy: 95.2750015258789, Validation Loss: 0.40116438269615173, Validation Accuracy: 87.93333435058594
+
+Epoch 35, Training Loss: 0.13088446855545044, Training Accuracy: 95.51249694824219, Validation Loss: 0.4062137007713318, Validation Accuracy: 87.75
+
+Epoch 36, Training Loss: 0.1285945028066635, Training Accuracy: 95.5875015258789, Validation Loss: 0.4337317645549774, Validation Accuracy: 87.30833435058594
+
+Epoch 37, Training Loss: 0.12533606588840485, Training Accuracy: 95.68333435058594, Validation Loss: 0.40731117129325867, Validation Accuracy: 87.7750015258789
+
+Epoch 38, Training Loss: 0.1239895150065422, Training Accuracy: 95.69166564941406, Validation Loss: 0.42144784331321716, Validation Accuracy: 87.69999694824219
+
+Epoch 39, Training Loss: 0.11960715800523758, Training Accuracy: 95.9000015258789, Validation Loss: 0.42296648025512695, Validation Accuracy: 87.82499694824219
+
+Epoch 40, Training Loss: 0.11683271080255508, Training Accuracy: 95.99166870117188, Validation Loss: 0.43203309178352356, Validation Accuracy: 87.59166717529297
+
+Epoch 41, Training Loss: 0.11460447311401367, Training Accuracy: 95.99791717529297, Validation Loss: 0.4435299336910248, Validation Accuracy: 87.56666564941406
+
+Epoch 42, Training Loss: 0.11190309375524521, Training Accuracy: 96.12083435058594, Validation Loss: 0.44586268067359924, Validation Accuracy: 87.41666412353516
+
+Epoch 43, Training Loss: 0.108982615172863, Training Accuracy: 96.23749542236328, Validation Loss: 0.43078872561454773, Validation Accuracy: 88.01666259765625
+
+Epoch 44, Training Loss: 0.10610993206501007, Training Accuracy: 96.39583587646484, Validation Loss: 0.46625855565071106, Validation Accuracy: 87.625
+
+Epoch 45, Training Loss: 0.10366089642047882, Training Accuracy: 96.48958587646484, Validation Loss: 0.4480309784412384, Validation Accuracy: 87.93333435058594
+
+Epoch 46, Training Loss: 0.10109533369541168, Training Accuracy: 96.5687484741211, Validation Loss: 0.4652111530303955, Validation Accuracy: 87.82499694824219
+
+Epoch 47, Training Loss: 0.09879220277070999, Training Accuracy: 96.68333435058594, Validation Loss: 0.4678015410900116, Validation Accuracy: 87.7750015258789
+
+Epoch 48, Training Loss: 0.09776289761066437, Training Accuracy: 96.63333129882812, Validation Loss: 0.4712046682834625, Validation Accuracy: 87.90833282470703
+
+Epoch 49, Training Loss: 0.09607886523008347, Training Accuracy: 96.78541564941406, Validation Loss: 0.49561768770217896, Validation Accuracy: 87.34166717529297
+
+Epoch 50, Training Loss: 0.0938316062092781, Training Accuracy: 96.76667022705078, Validation Loss: 0.5045251250267029, Validation Accuracy: 87.50833129882812
+
+Epoch 51, Training Loss: 0.09035029262304306, Training Accuracy: 96.93541717529297, Validation Loss: 0.5141294598579407, Validation Accuracy: 87.3499984741211
+
+Epoch 52, Training Loss: 0.08929337561130524, Training Accuracy: 96.99583435058594, Validation Loss: 0.5160516500473022, Validation Accuracy: 87.25
+
+Epoch 53, Training Loss: 0.08828970044851303, Training Accuracy: 96.9625015258789, Validation Loss: 0.509596049785614, Validation Accuracy: 87.6500015258789
+
+Epoch 54, Training Loss: 0.08588496595621109, Training Accuracy: 97.11041259765625, Validation Loss: 0.5193066596984863, Validation Accuracy: 87.46666717529297
+
+Epoch 55, Training Loss: 0.08421648293733597, Training Accuracy: 97.07708740234375, Validation Loss: 0.5416926741600037, Validation Accuracy: 87.07500457763672
+
+Epoch 56, Training Loss: 0.08390267193317413, Training Accuracy: 97.0999984741211, Validation Loss: 0.5156835317611694, Validation Accuracy: 87.75
+
+Epoch 57, Training Loss: 0.08056352287530899, Training Accuracy: 97.26041412353516, Validation Loss: 0.5504094362258911, Validation Accuracy: 87.3499984741211
+
+Epoch 58, Training Loss: 0.07876265794038773, Training Accuracy: 97.28333282470703, Validation Loss: 0.6666511297225952, Validation Accuracy: 85.80833435058594
+
+Epoch 59, Training Loss: 0.07996076345443726, Training Accuracy: 97.26457977294922, Validation Loss: 0.5624039173126221, Validation Accuracy: 87.30000305175781
+
+Epoch 60, Training Loss: 0.0783943235874176, Training Accuracy: 97.29582977294922, Validation Loss: 0.5456352829933167, Validation Accuracy: 87.88333892822266
+
+Epoch 61, Training Loss: 0.07793290913105011, Training Accuracy: 97.3125, Validation Loss: 0.5672762393951416, Validation Accuracy: 87.69999694824219
+
+Epoch 62, Training Loss: 0.07708270102739334, Training Accuracy: 97.33958435058594, Validation Loss: 0.5160529017448425, Validation Accuracy: 87.84166717529297
+
+Epoch 63, Training Loss: 0.07424310594797134, Training Accuracy: 97.40833282470703, Validation Loss: 0.5594297051429749, Validation Accuracy: 87.85832977294922
+
+Epoch 64, Training Loss: 0.07183792442083359, Training Accuracy: 97.54166412353516, Validation Loss: 0.566251277923584, Validation Accuracy: 87.73333740234375
+
+Epoch 65, Training Loss: 0.06967758387327194, Training Accuracy: 97.61666870117188, Validation Loss: 0.5924683809280396, Validation Accuracy: 87.44999694824219
+
+Epoch 66, Training Loss: 0.06906822323799133, Training Accuracy: 97.59583282470703, Validation Loss: 0.5474333167076111, Validation Accuracy: 88.02499389648438
+
+Epoch 67, Training Loss: 0.07056425511837006, Training Accuracy: 97.49791717529297, Validation Loss: 0.5492000579833984, Validation Accuracy: 87.90833282470703
+
+Epoch 68, Training Loss: 0.06885073333978653, Training Accuracy: 97.5687484741211, Validation Loss: 0.5751110315322876, Validation Accuracy: 87.8499984741211
+
+Epoch 69, Training Loss: 0.06710013747215271, Training Accuracy: 97.65416717529297, Validation Loss: 0.5897501707077026, Validation Accuracy: 87.7249984741211
+
+Epoch 70, Training Loss: 0.06592462956905365, Training Accuracy: 97.75, Validation Loss: 0.5652969479560852, Validation Accuracy: 87.98333740234375
+
+Epoch 71, Training Loss: 0.06806377321481705, Training Accuracy: 97.68333435058594, Validation Loss: 0.5884770750999451, Validation Accuracy: 87.75
+
+Epoch 72, Training Loss: 0.06398287415504456, Training Accuracy: 97.73332977294922, Validation Loss: 0.5978363156318665, Validation Accuracy: 87.91666412353516
+
+Epoch 73, Training Loss: 0.06330032646656036, Training Accuracy: 97.84791564941406, Validation Loss: 0.5798549652099609, Validation Accuracy: 88.32499694824219
+
+Epoch 74, Training Loss: 0.06189626082777977, Training Accuracy: 97.89166259765625, Validation Loss: 0.5783080458641052, Validation Accuracy: 88.25833129882812
+
+Epoch 75, Training Loss: 0.0629892498254776, Training Accuracy: 97.88333129882812, Validation Loss: 0.6069633364677429, Validation Accuracy: 88.04167175292969
+
+Epoch 76, Training Loss: 0.06016816571354866, Training Accuracy: 97.95416259765625, Validation Loss: 0.6065028309822083, Validation Accuracy: 88.15833282470703
+
+Epoch 77, Training Loss: 0.0585564523935318, Training Accuracy: 97.99791717529297, Validation Loss: 0.5968306660652161, Validation Accuracy: 87.70833587646484
+
+Epoch 78, Training Loss: 0.0607483871281147, Training Accuracy: 97.87916564941406, Validation Loss: 0.6030751466751099, Validation Accuracy: 87.8499984741211
+
+Epoch 79, Training Loss: 0.06028931215405464, Training Accuracy: 97.9312515258789, Validation Loss: 0.6116114854812622, Validation Accuracy: 87.9749984741211
+
+Epoch 80, Training Loss: 0.05457751452922821, Training Accuracy: 98.10416412353516, Validation Loss: 0.6201832890510559, Validation Accuracy: 87.98333740234375
+
+Epoch 81, Training Loss: 0.0565643310546875, Training Accuracy: 98.03333282470703, Validation Loss: 0.6304017901420593, Validation Accuracy: 88.06666564941406
+
+Epoch 82, Training Loss: 0.05616262927651405, Training Accuracy: 98.0625, Validation Loss: 0.6105233430862427, Validation Accuracy: 88.11666107177734
+
+Epoch 83, Training Loss: 0.05606536939740181, Training Accuracy: 98.01874542236328, Validation Loss: 0.5984553098678589, Validation Accuracy: 88.0999984741211
+
+Epoch 84, Training Loss: 0.05712885409593582, Training Accuracy: 98.0062484741211, Validation Loss: 0.6572462320327759, Validation Accuracy: 87.65833282470703
+
+Epoch 85, Training Loss: 0.05760369449853897, Training Accuracy: 98.00416564941406, Validation Loss: 0.62208491563797, Validation Accuracy: 88.06666564941406
+
+Epoch 86, Training Loss: 0.05711350589990616, Training Accuracy: 98.02708435058594, Validation Loss: 0.6213786005973816, Validation Accuracy: 87.92499542236328
+
+Epoch 87, Training Loss: 0.05250568687915802, Training Accuracy: 98.17083740234375, Validation Loss: 0.655362069606781, Validation Accuracy: 87.58333587646484
+
+Epoch 88, Training Loss: 0.05456508323550224, Training Accuracy: 98.04375457763672, Validation Loss: 0.6299286484718323, Validation Accuracy: 88.09166717529297
+
+Epoch 89, Training Loss: 0.052756354212760925, Training Accuracy: 98.14375305175781, Validation Loss: 0.626913845539093, Validation Accuracy: 88.16666412353516
+
+Epoch 90, Training Loss: 0.04903552681207657, Training Accuracy: 98.26874542236328, Validation Loss: 0.6572525501251221, Validation Accuracy: 88.30000305175781
+
+Epoch 91, Training Loss: 0.04926089569926262, Training Accuracy: 98.28958129882812, Validation Loss: 0.6515776515007019, Validation Accuracy: 88.31666564941406
+
+Epoch 92, Training Loss: 0.04958394914865494, Training Accuracy: 98.22291564941406, Validation Loss: 0.6487914323806763, Validation Accuracy: 87.80833435058594
+
+Epoch 93, Training Loss: 0.049007803201675415, Training Accuracy: 98.32291412353516, Validation Loss: 0.6525635719299316, Validation Accuracy: 87.75833129882812
+
+Epoch 94, Training Loss: 0.045889388769865036, Training Accuracy: 98.35416412353516, Validation Loss: 0.6451544761657715, Validation Accuracy: 87.9749984741211
+
+Epoch 95, Training Loss: 0.047165390104055405, Training Accuracy: 98.37916564941406, Validation Loss: 0.651787519454956, Validation Accuracy: 88.10832977294922
+
+Epoch 96, Training Loss: 0.04623362049460411, Training Accuracy: 98.40208435058594, Validation Loss: 0.6554360389709473, Validation Accuracy: 88.09166717529297
+
+Epoch 97, Training Loss: 0.04852962866425514, Training Accuracy: 98.33333587646484, Validation Loss: 0.6419930458068848, Validation Accuracy: 88.17499542236328
+
+Epoch 98, Training Loss: 0.05130648985505104, Training Accuracy: 98.1312484741211, Validation Loss: 0.6496895551681519, Validation Accuracy: 88.0
+
+Epoch 99, Training Loss: 0.044383514672517776, Training Accuracy: 98.43124389648438, Validation Loss: 0.6587730050086975, Validation Accuracy: 88.07499694824219
+
+Epoch 100, Training Loss: 0.04455685243010521, Training Accuracy: 98.48750305175781, Validation Loss: 0.659384548664093, Validation Accuracy: 88.13333129882812
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Time taken to finish 100 epochs ===> 2262.15714097023 secs
+
+Highest Validation Accuracy: 88.56666564941406% at Epoch: #16
+
+########################################################################################################################################################################################################
+Iteration ======> 4
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epoch 1, Training Loss: 0.5592774152755737, Training Accuracy: 80.06041717529297, Validation Loss: 0.473450630903244, Validation Accuracy: 83.24166870117188
+Highest Accuracy so far: 83.24166870117188% at EPOCH: 1 in ITERATION: 4
+
+Epoch 2, Training Loss: 0.4111171364784241, Training Accuracy: 85.13333129882812, Validation Loss: 0.43355754017829895, Validation Accuracy: 84.45833587646484
+Highest Accuracy so far: 84.45833587646484% at EPOCH: 2 in ITERATION: 4
+
+Epoch 3, Training Loss: 0.3702460527420044, Training Accuracy: 86.625, Validation Loss: 0.38995563983917236, Validation Accuracy: 86.26667022705078
+Highest Accuracy so far: 86.26667022705078% at EPOCH: 3 in ITERATION: 4
+
+Epoch 4, Training Loss: 0.3436724841594696, Training Accuracy: 87.52291870117188, Validation Loss: 0.3634629249572754, Validation Accuracy: 87.08333587646484
+Highest Accuracy so far: 87.08333587646484% at EPOCH: 4 in ITERATION: 4
+
+Epoch 5, Training Loss: 0.32366833090782166, Training Accuracy: 88.23124694824219, Validation Loss: 0.351423978805542, Validation Accuracy: 87.2750015258789
+Highest Accuracy so far: 87.2750015258789% at EPOCH: 5 in ITERATION: 4
+
+Epoch 6, Training Loss: 0.3080512583255768, Training Accuracy: 88.73124694824219, Validation Loss: 0.34253308176994324, Validation Accuracy: 87.65833282470703
+Highest Accuracy so far: 87.65833282470703% at EPOCH: 6 in ITERATION: 4
+
+Epoch 7, Training Loss: 0.29407140612602234, Training Accuracy: 89.20207977294922, Validation Loss: 0.33520764112472534, Validation Accuracy: 87.8499984741211
+Highest Accuracy so far: 87.8499984741211% at EPOCH: 7 in ITERATION: 4
+
+Epoch 8, Training Loss: 0.2826440632343292, Training Accuracy: 89.625, Validation Loss: 0.3254331052303314, Validation Accuracy: 88.19166564941406
+Highest Accuracy so far: 88.19166564941406% at EPOCH: 8 in ITERATION: 4
+
+Epoch 9, Training Loss: 0.27179884910583496, Training Accuracy: 90.03333282470703, Validation Loss: 0.32472163438796997, Validation Accuracy: 88.2249984741211
+Highest Accuracy so far: 88.2249984741211% at EPOCH: 9 in ITERATION: 4
+
+Epoch 10, Training Loss: 0.2622964680194855, Training Accuracy: 90.45624542236328, Validation Loss: 0.32100963592529297, Validation Accuracy: 88.55000305175781
+Highest Accuracy so far: 88.55000305175781% at EPOCH: 10 in ITERATION: 4
+
+Epoch 11, Training Loss: 0.2539224922657013, Training Accuracy: 90.73958587646484, Validation Loss: 0.3201656937599182, Validation Accuracy: 88.69166564941406
+Highest Accuracy so far: 88.69166564941406% at EPOCH: 11 in ITERATION: 4
+
+Epoch 12, Training Loss: 0.2455318421125412, Training Accuracy: 90.99583435058594, Validation Loss: 0.31625425815582275, Validation Accuracy: 88.7750015258789
+Highest Accuracy so far: 88.7750015258789% at EPOCH: 12 in ITERATION: 4
+
+Epoch 13, Training Loss: 0.23754853010177612, Training Accuracy: 91.37291717529297, Validation Loss: 0.31525012850761414, Validation Accuracy: 88.79167175292969
+Highest Accuracy so far: 88.79167175292969% at EPOCH: 13 in ITERATION: 4
+
+Epoch 14, Training Loss: 0.23057839274406433, Training Accuracy: 91.4937515258789, Validation Loss: 0.3156946301460266, Validation Accuracy: 88.85833740234375
+Highest Accuracy so far: 88.85833740234375% at EPOCH: 14 in ITERATION: 4
+
+Epoch 15, Training Loss: 0.2237660139799118, Training Accuracy: 91.79582977294922, Validation Loss: 0.32390570640563965, Validation Accuracy: 88.625
+
+Epoch 16, Training Loss: 0.2178725004196167, Training Accuracy: 92.0374984741211, Validation Loss: 0.3233945369720459, Validation Accuracy: 88.58333587646484
+
+Epoch 17, Training Loss: 0.21181495487689972, Training Accuracy: 92.27083587646484, Validation Loss: 0.3274466097354889, Validation Accuracy: 88.70000457763672
+
+Epoch 18, Training Loss: 0.2059956043958664, Training Accuracy: 92.52291870117188, Validation Loss: 0.3337131440639496, Validation Accuracy: 88.45000457763672
+
+Epoch 19, Training Loss: 0.20019106566905975, Training Accuracy: 92.79582977294922, Validation Loss: 0.32102397084236145, Validation Accuracy: 88.94166564941406
+Model saved for EPOCH: 19 at ITERATION: 4 with Validation Accuracy: 88.94166564941406%
+Highest Accuracy so far: 88.94166564941406% at EPOCH: 19 in ITERATION: 4
+
+Epoch 20, Training Loss: 0.19459646940231323, Training Accuracy: 93.02916717529297, Validation Loss: 0.32866302132606506, Validation Accuracy: 88.74166870117188
+
+Epoch 21, Training Loss: 0.18892468512058258, Training Accuracy: 93.18541717529297, Validation Loss: 0.3305915594100952, Validation Accuracy: 88.88333129882812
+
+Epoch 22, Training Loss: 0.18488416075706482, Training Accuracy: 93.3375015258789, Validation Loss: 0.33237117528915405, Validation Accuracy: 88.76666259765625
+
+Epoch 23, Training Loss: 0.17983190715312958, Training Accuracy: 93.54791259765625, Validation Loss: 0.33700305223464966, Validation Accuracy: 88.48333740234375
+
+Epoch 24, Training Loss: 0.1750217229127884, Training Accuracy: 93.78541564941406, Validation Loss: 0.34424829483032227, Validation Accuracy: 88.18333435058594
+
+Epoch 25, Training Loss: 0.1709664762020111, Training Accuracy: 93.92500305175781, Validation Loss: 0.3539203703403473, Validation Accuracy: 88.0
+
+Epoch 26, Training Loss: 0.16646112501621246, Training Accuracy: 94.09166717529297, Validation Loss: 0.3514401912689209, Validation Accuracy: 88.15833282470703
+
+Epoch 27, Training Loss: 0.1622123420238495, Training Accuracy: 94.32291412353516, Validation Loss: 0.34443822503089905, Validation Accuracy: 88.48333740234375
+
+Epoch 28, Training Loss: 0.15925650298595428, Training Accuracy: 94.25208282470703, Validation Loss: 0.3488619327545166, Validation Accuracy: 88.68333435058594
+
+Epoch 29, Training Loss: 0.15557719767093658, Training Accuracy: 94.49791717529297, Validation Loss: 0.3563252389431, Validation Accuracy: 88.30833435058594
+
+Epoch 30, Training Loss: 0.15183617174625397, Training Accuracy: 94.64583587646484, Validation Loss: 0.36047038435935974, Validation Accuracy: 88.25
+
+Epoch 31, Training Loss: 0.14684563875198364, Training Accuracy: 94.77916717529297, Validation Loss: 0.36015331745147705, Validation Accuracy: 88.41666412353516
+
+Epoch 32, Training Loss: 0.1435762643814087, Training Accuracy: 94.88750457763672, Validation Loss: 0.37074142694473267, Validation Accuracy: 88.45833587646484
+
+Epoch 33, Training Loss: 0.14094246923923492, Training Accuracy: 94.99583435058594, Validation Loss: 0.36995992064476013, Validation Accuracy: 88.54167175292969
+
+Epoch 34, Training Loss: 0.13723772764205933, Training Accuracy: 95.17499542236328, Validation Loss: 0.3763701617717743, Validation Accuracy: 88.25833129882812
+
+Epoch 35, Training Loss: 0.1330060064792633, Training Accuracy: 95.375, Validation Loss: 0.40743905305862427, Validation Accuracy: 87.40833282470703
+
+Epoch 36, Training Loss: 0.13079918920993805, Training Accuracy: 95.42708587646484, Validation Loss: 0.4153794050216675, Validation Accuracy: 87.35832977294922
+
+Epoch 37, Training Loss: 0.1276816874742508, Training Accuracy: 95.54167175292969, Validation Loss: 0.40424177050590515, Validation Accuracy: 87.80000305175781
+
+Epoch 38, Training Loss: 0.12531277537345886, Training Accuracy: 95.71458435058594, Validation Loss: 0.4159058928489685, Validation Accuracy: 87.45832824707031
+
+Epoch 39, Training Loss: 0.12246842682361603, Training Accuracy: 95.78333282470703, Validation Loss: 0.4356350898742676, Validation Accuracy: 86.94999694824219
+
+Epoch 40, Training Loss: 0.11978164315223694, Training Accuracy: 95.9000015258789, Validation Loss: 0.4399436116218567, Validation Accuracy: 86.89167022705078
+
+Epoch 41, Training Loss: 0.11655072867870331, Training Accuracy: 96.00208282470703, Validation Loss: 0.455873042345047, Validation Accuracy: 86.64167022705078
+
+Epoch 42, Training Loss: 0.11390424519777298, Training Accuracy: 96.125, Validation Loss: 0.45003578066825867, Validation Accuracy: 86.70832824707031
+
+Epoch 43, Training Loss: 0.1108655110001564, Training Accuracy: 96.24791717529297, Validation Loss: 0.4482012391090393, Validation Accuracy: 87.14167022705078
+
+Epoch 44, Training Loss: 0.10812575370073318, Training Accuracy: 96.27916717529297, Validation Loss: 0.4361155927181244, Validation Accuracy: 87.65833282470703
+
+Epoch 45, Training Loss: 0.1054915338754654, Training Accuracy: 96.42916870117188, Validation Loss: 0.45132800936698914, Validation Accuracy: 87.44999694824219
+
+Epoch 46, Training Loss: 0.10431760549545288, Training Accuracy: 96.42708587646484, Validation Loss: 0.46786803007125854, Validation Accuracy: 87.19999694824219
+
+Epoch 47, Training Loss: 0.10182225704193115, Training Accuracy: 96.57916259765625, Validation Loss: 0.4762721061706543, Validation Accuracy: 86.8499984741211
+
+Epoch 48, Training Loss: 0.09890435636043549, Training Accuracy: 96.69583129882812, Validation Loss: 0.45720601081848145, Validation Accuracy: 87.85832977294922
+
+Epoch 49, Training Loss: 0.09587009996175766, Training Accuracy: 96.74791717529297, Validation Loss: 0.4647505581378937, Validation Accuracy: 87.875
+
+Epoch 50, Training Loss: 0.09455884993076324, Training Accuracy: 96.81458282470703, Validation Loss: 0.48918014764785767, Validation Accuracy: 86.69166564941406
+
+Epoch 51, Training Loss: 0.09323566406965256, Training Accuracy: 96.82708740234375, Validation Loss: 0.4820505678653717, Validation Accuracy: 87.14167022705078
+
+Epoch 52, Training Loss: 0.09050583839416504, Training Accuracy: 97.06041717529297, Validation Loss: 0.46772387623786926, Validation Accuracy: 87.94166564941406
+
+Epoch 53, Training Loss: 0.0896315723657608, Training Accuracy: 97.01667022705078, Validation Loss: 0.470684289932251, Validation Accuracy: 87.90833282470703
+
+Epoch 54, Training Loss: 0.08815200626850128, Training Accuracy: 96.94999694824219, Validation Loss: 0.49034589529037476, Validation Accuracy: 87.80833435058594
+
+Epoch 55, Training Loss: 0.08868389576673508, Training Accuracy: 97.01667022705078, Validation Loss: 0.5093521475791931, Validation Accuracy: 87.33333587646484
+
+Epoch 56, Training Loss: 0.08416954427957535, Training Accuracy: 97.1812515258789, Validation Loss: 0.49540573358535767, Validation Accuracy: 87.92499542236328
+
+Epoch 57, Training Loss: 0.083999402821064, Training Accuracy: 97.21458435058594, Validation Loss: 0.5278099179267883, Validation Accuracy: 87.35832977294922
+
+Epoch 58, Training Loss: 0.08215947449207306, Training Accuracy: 97.23542022705078, Validation Loss: 0.5292415618896484, Validation Accuracy: 87.58333587646484
+
+Epoch 59, Training Loss: 0.07890727370977402, Training Accuracy: 97.33958435058594, Validation Loss: 0.5478372573852539, Validation Accuracy: 86.875
+
+Epoch 60, Training Loss: 0.07904210686683655, Training Accuracy: 97.33333587646484, Validation Loss: 0.5209060311317444, Validation Accuracy: 87.75
+
+Epoch 61, Training Loss: 0.07786686718463898, Training Accuracy: 97.39375305175781, Validation Loss: 0.5244760513305664, Validation Accuracy: 87.4000015258789
+
+Epoch 62, Training Loss: 0.07570021599531174, Training Accuracy: 97.45416259765625, Validation Loss: 0.5264036655426025, Validation Accuracy: 87.69166564941406
+
+Epoch 63, Training Loss: 0.0743493065237999, Training Accuracy: 97.48124694824219, Validation Loss: 0.5611090660095215, Validation Accuracy: 86.89167022705078
+
+Epoch 64, Training Loss: 0.074750617146492, Training Accuracy: 97.46458435058594, Validation Loss: 0.5253207087516785, Validation Accuracy: 87.80833435058594
+
+Epoch 65, Training Loss: 0.07223295420408249, Training Accuracy: 97.51250457763672, Validation Loss: 0.5477025508880615, Validation Accuracy: 87.60832977294922
+
+Epoch 66, Training Loss: 0.0734579935669899, Training Accuracy: 97.46041870117188, Validation Loss: 0.5650907754898071, Validation Accuracy: 87.57499694824219
+
+Epoch 67, Training Loss: 0.069217249751091, Training Accuracy: 97.5687484741211, Validation Loss: 0.5465232729911804, Validation Accuracy: 87.5
+
+Epoch 68, Training Loss: 0.07206717133522034, Training Accuracy: 97.48542022705078, Validation Loss: 0.6473331451416016, Validation Accuracy: 85.71666717529297
+
+Epoch 69, Training Loss: 0.06647995114326477, Training Accuracy: 97.76250457763672, Validation Loss: 0.5602579116821289, Validation Accuracy: 87.29166412353516
+
+Epoch 70, Training Loss: 0.06823848187923431, Training Accuracy: 97.64999389648438, Validation Loss: 0.5880241394042969, Validation Accuracy: 87.29166412353516
+
+Epoch 71, Training Loss: 0.06782431900501251, Training Accuracy: 97.6812515258789, Validation Loss: 0.6077376008033752, Validation Accuracy: 87.01666259765625
+
+Epoch 72, Training Loss: 0.06823385506868362, Training Accuracy: 97.64166259765625, Validation Loss: 0.6178449988365173, Validation Accuracy: 87.0
+
+Epoch 73, Training Loss: 0.06648195534944534, Training Accuracy: 97.66874694824219, Validation Loss: 0.736177921295166, Validation Accuracy: 85.08333587646484
+
+Epoch 74, Training Loss: 0.06444980204105377, Training Accuracy: 97.76457977294922, Validation Loss: 0.5838830471038818, Validation Accuracy: 87.41666412353516
+
+Epoch 75, Training Loss: 0.06108439713716507, Training Accuracy: 97.92707824707031, Validation Loss: 0.586603045463562, Validation Accuracy: 87.42500305175781
+
+Epoch 76, Training Loss: 0.0645231381058693, Training Accuracy: 97.76250457763672, Validation Loss: 0.5930225253105164, Validation Accuracy: 87.875
+
+Epoch 77, Training Loss: 0.06046406924724579, Training Accuracy: 97.94583129882812, Validation Loss: 0.5757099390029907, Validation Accuracy: 87.70833587646484
+
+Epoch 78, Training Loss: 0.060523293912410736, Training Accuracy: 97.90416717529297, Validation Loss: 0.6950297951698303, Validation Accuracy: 86.69166564941406
+
+Epoch 79, Training Loss: 0.05962766334414482, Training Accuracy: 97.93541717529297, Validation Loss: 0.5851933360099792, Validation Accuracy: 87.81666564941406
+
+Epoch 80, Training Loss: 0.05959612503647804, Training Accuracy: 97.85416412353516, Validation Loss: 0.6185460686683655, Validation Accuracy: 87.5250015258789
+
+Epoch 81, Training Loss: 0.05605097487568855, Training Accuracy: 98.11666870117188, Validation Loss: 0.6164507865905762, Validation Accuracy: 87.18333435058594
+
+Epoch 82, Training Loss: 0.05965917557477951, Training Accuracy: 97.9312515258789, Validation Loss: 0.6566529273986816, Validation Accuracy: 87.4749984741211
+
+Epoch 83, Training Loss: 0.05791167542338371, Training Accuracy: 97.91667175292969, Validation Loss: 0.630196213722229, Validation Accuracy: 87.50833129882812
+
+Epoch 84, Training Loss: 0.056709665805101395, Training Accuracy: 97.98332977294922, Validation Loss: 0.6425798535346985, Validation Accuracy: 87.14167022705078
+
+Epoch 85, Training Loss: 0.05433258041739464, Training Accuracy: 98.18333435058594, Validation Loss: 0.6466366648674011, Validation Accuracy: 87.19999694824219
+
+Epoch 86, Training Loss: 0.05454046651721001, Training Accuracy: 98.10832977294922, Validation Loss: 0.6571545600891113, Validation Accuracy: 87.3499984741211
+
+Epoch 87, Training Loss: 0.056357380002737045, Training Accuracy: 98.06041717529297, Validation Loss: 0.6270297169685364, Validation Accuracy: 87.73333740234375
+
+Epoch 88, Training Loss: 0.05442214012145996, Training Accuracy: 98.10416412353516, Validation Loss: 0.6631352305412292, Validation Accuracy: 87.46666717529297
+
+Epoch 89, Training Loss: 0.0518028698861599, Training Accuracy: 98.2562484741211, Validation Loss: 0.642472505569458, Validation Accuracy: 87.32499694824219
+
+Epoch 90, Training Loss: 0.04848164692521095, Training Accuracy: 98.30416107177734, Validation Loss: 0.6283553242683411, Validation Accuracy: 87.80833435058594
+
+Epoch 91, Training Loss: 0.04816623404622078, Training Accuracy: 98.30208587646484, Validation Loss: 0.6641788482666016, Validation Accuracy: 87.49166870117188
+
+Epoch 92, Training Loss: 0.05302739888429642, Training Accuracy: 98.16874694824219, Validation Loss: 0.6623706221580505, Validation Accuracy: 87.71666717529297
+
+Epoch 93, Training Loss: 0.04994029179215431, Training Accuracy: 98.28958129882812, Validation Loss: 0.6620275974273682, Validation Accuracy: 87.375
+
+Epoch 94, Training Loss: 0.05346404016017914, Training Accuracy: 98.06666564941406, Validation Loss: 0.7739959955215454, Validation Accuracy: 86.9000015258789
+
+Epoch 95, Training Loss: 0.05164942517876625, Training Accuracy: 98.24583435058594, Validation Loss: 0.7692757248878479, Validation Accuracy: 86.61666870117188
+
+Epoch 96, Training Loss: 0.04877927526831627, Training Accuracy: 98.30208587646484, Validation Loss: 0.6898019313812256, Validation Accuracy: 87.28333282470703
+
+Epoch 97, Training Loss: 0.04485902562737465, Training Accuracy: 98.51457977294922, Validation Loss: 0.6847469806671143, Validation Accuracy: 87.71666717529297
+
+Epoch 98, Training Loss: 0.0460841991007328, Training Accuracy: 98.375, Validation Loss: 0.6907985210418701, Validation Accuracy: 87.69999694824219
+
+Epoch 99, Training Loss: 0.048780109733343124, Training Accuracy: 98.31666564941406, Validation Loss: 0.6919443607330322, Validation Accuracy: 87.24166870117188
+
+Epoch 100, Training Loss: 0.049219731241464615, Training Accuracy: 98.32291412353516, Validation Loss: 0.6617027521133423, Validation Accuracy: 87.85832977294922
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Time taken to finish 100 epochs ===> 2469.5764453411102 secs
+
+Highest Validation Accuracy: 88.94166564941406% at Epoch: #19
+
+########################################################################################################################################################################################################
+Iteration ======> 5
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Epoch 1, Training Loss: 0.554086446762085, Training Accuracy: 80.31041717529297, Validation Loss: 0.45278018712997437, Validation Accuracy: 83.91666412353516
+Highest Accuracy so far: 83.91666412353516% at EPOCH: 1 in ITERATION: 5
+
+Epoch 2, Training Loss: 0.4063596725463867, Training Accuracy: 85.31666564941406, Validation Loss: 0.3938559591770172, Validation Accuracy: 85.86666870117188
+Highest Accuracy so far: 85.86666870117188% at EPOCH: 2 in ITERATION: 5
+
+Epoch 3, Training Loss: 0.3660142123699188, Training Accuracy: 86.72708129882812, Validation Loss: 0.3783799707889557, Validation Accuracy: 86.59166717529297
+Highest Accuracy so far: 86.59166717529297% at EPOCH: 3 in ITERATION: 5
+
+Epoch 4, Training Loss: 0.34007611870765686, Training Accuracy: 87.6500015258789, Validation Loss: 0.3909812867641449, Validation Accuracy: 86.0
+
+Epoch 5, Training Loss: 0.3203539550304413, Training Accuracy: 88.32499694824219, Validation Loss: 0.35745638608932495, Validation Accuracy: 87.05833435058594
+Highest Accuracy so far: 87.05833435058594% at EPOCH: 5 in ITERATION: 5
+
+Epoch 6, Training Loss: 0.3052535653114319, Training Accuracy: 88.85416412353516, Validation Loss: 0.34380459785461426, Validation Accuracy: 87.55000305175781
+Highest Accuracy so far: 87.55000305175781% at EPOCH: 6 in ITERATION: 5
+
+Epoch 7, Training Loss: 0.2919859290122986, Training Accuracy: 89.28958129882812, Validation Loss: 0.3454315662384033, Validation Accuracy: 87.80000305175781
+Highest Accuracy so far: 87.80000305175781% at EPOCH: 7 in ITERATION: 5
+
+Epoch 8, Training Loss: 0.28064846992492676, Training Accuracy: 89.73125457763672, Validation Loss: 0.328368216753006, Validation Accuracy: 88.16666412353516
+Highest Accuracy so far: 88.16666412353516% at EPOCH: 8 in ITERATION: 5
+
+Epoch 9, Training Loss: 0.27032455801963806, Training Accuracy: 90.07916259765625, Validation Loss: 0.3250473141670227, Validation Accuracy: 88.45000457763672
+Highest Accuracy so far: 88.45000457763672% at EPOCH: 9 in ITERATION: 5
+
+Epoch 10, Training Loss: 0.2601277232170105, Training Accuracy: 90.55000305175781, Validation Loss: 0.3276241421699524, Validation Accuracy: 88.42499542236328
+
+Epoch 11, Training Loss: 0.251797616481781, Training Accuracy: 90.84583282470703, Validation Loss: 0.329974502325058, Validation Accuracy: 88.24166870117188
+
+Epoch 12, Training Loss: 0.24376679956912994, Training Accuracy: 91.12083435058594, Validation Loss: 0.33190032839775085, Validation Accuracy: 88.31666564941406
+
+Epoch 13, Training Loss: 0.23622864484786987, Training Accuracy: 91.36250305175781, Validation Loss: 0.3290528655052185, Validation Accuracy: 88.39167022705078
+
+Epoch 14, Training Loss: 0.2295234650373459, Training Accuracy: 91.63542175292969, Validation Loss: 0.34628650546073914, Validation Accuracy: 87.59166717529297
+
+Epoch 15, Training Loss: 0.22349238395690918, Training Accuracy: 91.80833435058594, Validation Loss: 0.3380684554576874, Validation Accuracy: 88.10832977294922
+
+Epoch 16, Training Loss: 0.2169361561536789, Training Accuracy: 92.05416107177734, Validation Loss: 0.3338114023208618, Validation Accuracy: 88.24166870117188
+
+Epoch 17, Training Loss: 0.2109396606683731, Training Accuracy: 92.37083435058594, Validation Loss: 0.34084975719451904, Validation Accuracy: 88.17499542236328
+
+Epoch 18, Training Loss: 0.2046239674091339, Training Accuracy: 92.56666564941406, Validation Loss: 0.3379640579223633, Validation Accuracy: 88.375
+
+Epoch 19, Training Loss: 0.19927582144737244, Training Accuracy: 92.74791717529297, Validation Loss: 0.3343072831630707, Validation Accuracy: 88.4000015258789
+
+Epoch 20, Training Loss: 0.19325262308120728, Training Accuracy: 93.0562515258789, Validation Loss: 0.3387540280818939, Validation Accuracy: 88.625
+Highest Accuracy so far: 88.625% at EPOCH: 20 in ITERATION: 5
+
+Epoch 21, Training Loss: 0.18814365565776825, Training Accuracy: 93.1812515258789, Validation Loss: 0.3422525227069855, Validation Accuracy: 88.2249984741211
+
+Epoch 22, Training Loss: 0.1840336173772812, Training Accuracy: 93.37291717529297, Validation Loss: 0.3464066684246063, Validation Accuracy: 88.32499694824219
+
+Epoch 23, Training Loss: 0.17933666706085205, Training Accuracy: 93.5687484741211, Validation Loss: 0.34839001297950745, Validation Accuracy: 88.55833435058594
+
+Epoch 24, Training Loss: 0.1751483827829361, Training Accuracy: 93.75625610351562, Validation Loss: 0.35693246126174927, Validation Accuracy: 88.26666259765625
+
+Epoch 25, Training Loss: 0.1704064905643463, Training Accuracy: 93.9000015258789, Validation Loss: 0.36183232069015503, Validation Accuracy: 88.29167175292969
+
+Epoch 26, Training Loss: 0.16557447612285614, Training Accuracy: 94.14374542236328, Validation Loss: 0.36202624440193176, Validation Accuracy: 88.26666259765625
+
+Epoch 27, Training Loss: 0.16211190819740295, Training Accuracy: 94.21041870117188, Validation Loss: 0.36618953943252563, Validation Accuracy: 88.5
+
+Epoch 28, Training Loss: 0.15692074596881866, Training Accuracy: 94.46458435058594, Validation Loss: 0.364633172750473, Validation Accuracy: 88.5
+
+Epoch 29, Training Loss: 0.15291506052017212, Training Accuracy: 94.63333129882812, Validation Loss: 0.3753243088722229, Validation Accuracy: 88.20000457763672
+
+Epoch 30, Training Loss: 0.1490539312362671, Training Accuracy: 94.75, Validation Loss: 0.38648495078086853, Validation Accuracy: 88.27499389648438
+
+Epoch 31, Training Loss: 0.14564085006713867, Training Accuracy: 94.88957977294922, Validation Loss: 0.3778647184371948, Validation Accuracy: 88.01666259765625
+
+Epoch 32, Training Loss: 0.1431753784418106, Training Accuracy: 95.00208282470703, Validation Loss: 0.3798033893108368, Validation Accuracy: 88.32499694824219
+
+Epoch 33, Training Loss: 0.1401471495628357, Training Accuracy: 95.07499694824219, Validation Loss: 0.38345518708229065, Validation Accuracy: 88.125
+
+Epoch 34, Training Loss: 0.13627222180366516, Training Accuracy: 95.27291870117188, Validation Loss: 0.40288156270980835, Validation Accuracy: 87.90833282470703
+
+Epoch 35, Training Loss: 0.13350583612918854, Training Accuracy: 95.32499694824219, Validation Loss: 0.40092870593070984, Validation Accuracy: 87.83333587646484
+
+Epoch 36, Training Loss: 0.1300605833530426, Training Accuracy: 95.50833129882812, Validation Loss: 0.3973274230957031, Validation Accuracy: 88.29167175292969
+
+Epoch 37, Training Loss: 0.12757624685764313, Training Accuracy: 95.63749694824219, Validation Loss: 0.4052393436431885, Validation Accuracy: 88.18333435058594
+
+Epoch 38, Training Loss: 0.12449026852846146, Training Accuracy: 95.7874984741211, Validation Loss: 0.40749606490135193, Validation Accuracy: 88.15833282470703
+
+Epoch 39, Training Loss: 0.12274754047393799, Training Accuracy: 95.78541564941406, Validation Loss: 0.4190255403518677, Validation Accuracy: 87.70833587646484
+
+Epoch 40, Training Loss: 0.11870940029621124, Training Accuracy: 95.95000457763672, Validation Loss: 0.4151308238506317, Validation Accuracy: 88.11666107177734
+
+Epoch 41, Training Loss: 0.11464154720306396, Training Accuracy: 96.08958435058594, Validation Loss: 0.41696152091026306, Validation Accuracy: 88.04167175292969
+
+Epoch 42, Training Loss: 0.11274587363004684, Training Accuracy: 96.17708587646484, Validation Loss: 0.4159010350704193, Validation Accuracy: 88.03333282470703
+
+Epoch 43, Training Loss: 0.11116500943899155, Training Accuracy: 96.2125015258789, Validation Loss: 0.4273791015148163, Validation Accuracy: 87.98333740234375
+
+Epoch 44, Training Loss: 0.10791970789432526, Training Accuracy: 96.38542175292969, Validation Loss: 0.42671650648117065, Validation Accuracy: 88.17499542236328
+
+Epoch 45, Training Loss: 0.10491202026605606, Training Accuracy: 96.45624542236328, Validation Loss: 0.43045109510421753, Validation Accuracy: 87.98333740234375
+
+Epoch 46, Training Loss: 0.10532517731189728, Training Accuracy: 96.37083435058594, Validation Loss: 0.44372493028640747, Validation Accuracy: 87.86666107177734
+
+Epoch 47, Training Loss: 0.10142605751752853, Training Accuracy: 96.51874542236328, Validation Loss: 0.4462389647960663, Validation Accuracy: 87.94166564941406
+
+Epoch 48, Training Loss: 0.09910453110933304, Training Accuracy: 96.66458129882812, Validation Loss: 0.44811588525772095, Validation Accuracy: 88.10832977294922
+
+Epoch 49, Training Loss: 0.09778386354446411, Training Accuracy: 96.72291564941406, Validation Loss: 0.4546818733215332, Validation Accuracy: 87.98333740234375
+
+Epoch 50, Training Loss: 0.09586280584335327, Training Accuracy: 96.7750015258789, Validation Loss: 0.4668560028076172, Validation Accuracy: 88.03333282470703
+
+Epoch 51, Training Loss: 0.09396552294492722, Training Accuracy: 96.81666564941406, Validation Loss: 0.4810565114021301, Validation Accuracy: 87.84166717529297
+
+Epoch 52, Training Loss: 0.09184136241674423, Training Accuracy: 96.8187484741211, Validation Loss: 0.4889131784439087, Validation Accuracy: 87.8499984741211
+
+Epoch 53, Training Loss: 0.09059104323387146, Training Accuracy: 96.97291564941406, Validation Loss: 0.4978697896003723, Validation Accuracy: 87.76666259765625
+
+Epoch 54, Training Loss: 0.08868277072906494, Training Accuracy: 97.06666564941406, Validation Loss: 0.49620988965034485, Validation Accuracy: 88.02499389648438
+
+Epoch 55, Training Loss: 0.08701980859041214, Training Accuracy: 97.07499694824219, Validation Loss: 0.5092259645462036, Validation Accuracy: 87.76666259765625
+
+Epoch 56, Training Loss: 0.08398351818323135, Training Accuracy: 97.10417175292969, Validation Loss: 0.5051249265670776, Validation Accuracy: 87.92499542236328
+
+Epoch 57, Training Loss: 0.08491087704896927, Training Accuracy: 97.10417175292969, Validation Loss: 0.4980575740337372, Validation Accuracy: 87.95833587646484
+
+Epoch 58, Training Loss: 0.08227246254682541, Training Accuracy: 97.22083282470703, Validation Loss: 0.5155202746391296, Validation Accuracy: 87.80000305175781
+
+Epoch 59, Training Loss: 0.0801381766796112, Training Accuracy: 97.29999542236328, Validation Loss: 0.5245516896247864, Validation Accuracy: 87.64167022705078
+
+Epoch 60, Training Loss: 0.0785575658082962, Training Accuracy: 97.44166564941406, Validation Loss: 0.5186232328414917, Validation Accuracy: 87.94166564941406
+
+Epoch 61, Training Loss: 0.07648909837007523, Training Accuracy: 97.44166564941406, Validation Loss: 0.520024836063385, Validation Accuracy: 88.11666107177734
+
+Epoch 62, Training Loss: 0.07607833296060562, Training Accuracy: 97.42291259765625, Validation Loss: 0.5323722958564758, Validation Accuracy: 87.94166564941406
+
+Epoch 63, Training Loss: 0.0755651593208313, Training Accuracy: 97.44999694824219, Validation Loss: 0.5318402647972107, Validation Accuracy: 87.84166717529297
+
+Epoch 64, Training Loss: 0.07169840484857559, Training Accuracy: 97.58541870117188, Validation Loss: 0.5629937052726746, Validation Accuracy: 87.50833129882812
+
+Epoch 65, Training Loss: 0.07196135073900223, Training Accuracy: 97.47291564941406, Validation Loss: 0.5581589937210083, Validation Accuracy: 87.49166870117188
+
+Epoch 66, Training Loss: 0.06829432398080826, Training Accuracy: 97.70416259765625, Validation Loss: 0.5763089060783386, Validation Accuracy: 87.5250015258789
+
+Epoch 67, Training Loss: 0.07012724131345749, Training Accuracy: 97.66041564941406, Validation Loss: 0.5787096619606018, Validation Accuracy: 87.36666107177734
+
+Epoch 68, Training Loss: 0.06977925449609756, Training Accuracy: 97.71458435058594, Validation Loss: 0.5414871573448181, Validation Accuracy: 88.1500015258789
+
+Epoch 69, Training Loss: 0.06808045506477356, Training Accuracy: 97.6937484741211, Validation Loss: 0.5782328248023987, Validation Accuracy: 87.86666107177734
+
+Epoch 70, Training Loss: 0.06984972953796387, Training Accuracy: 97.60416412353516, Validation Loss: 0.5499687194824219, Validation Accuracy: 88.20833587646484
+
+Epoch 71, Training Loss: 0.06625870615243912, Training Accuracy: 97.79375457763672, Validation Loss: 0.5567874312400818, Validation Accuracy: 88.08333587646484
+
+Epoch 72, Training Loss: 0.06279077380895615, Training Accuracy: 97.95833587646484, Validation Loss: 0.5625497102737427, Validation Accuracy: 88.00833129882812
+
+Epoch 73, Training Loss: 0.06299734860658646, Training Accuracy: 97.83958435058594, Validation Loss: 0.5856205821037292, Validation Accuracy: 87.82499694824219
+
+Epoch 74, Training Loss: 0.06518630683422089, Training Accuracy: 97.77708435058594, Validation Loss: 0.5770267248153687, Validation Accuracy: 87.91666412353516
+
+Epoch 75, Training Loss: 0.06375884264707565, Training Accuracy: 97.85833740234375, Validation Loss: 0.5864021182060242, Validation Accuracy: 87.88333892822266
+
+Epoch 76, Training Loss: 0.06534788757562637, Training Accuracy: 97.8125, Validation Loss: 0.5875251293182373, Validation Accuracy: 87.94166564941406
+
+Epoch 77, Training Loss: 0.05830461531877518, Training Accuracy: 98.04999542236328, Validation Loss: 0.5923553109169006, Validation Accuracy: 88.09166717529297
+
+Epoch 78, Training Loss: 0.06046952307224274, Training Accuracy: 97.93541717529297, Validation Loss: 0.6179425716400146, Validation Accuracy: 87.7750015258789
+
+Epoch 79, Training Loss: 0.059820324182510376, Training Accuracy: 97.92500305175781, Validation Loss: 0.6018170118331909, Validation Accuracy: 87.73333740234375
+
+Epoch 80, Training Loss: 0.055794332176446915, Training Accuracy: 98.15208435058594, Validation Loss: 0.6344468593597412, Validation Accuracy: 87.35832977294922
+
+Epoch 81, Training Loss: 0.05576341226696968, Training Accuracy: 98.13333129882812, Validation Loss: 0.638669490814209, Validation Accuracy: 87.63333892822266
+
+Epoch 82, Training Loss: 0.05435747653245926, Training Accuracy: 98.18541717529297, Validation Loss: 0.623142659664154, Validation Accuracy: 87.9749984741211
+
+Epoch 83, Training Loss: 0.0530543327331543, Training Accuracy: 98.2437515258789, Validation Loss: 0.670069694519043, Validation Accuracy: 87.45832824707031
+
+Epoch 84, Training Loss: 0.058045342564582825, Training Accuracy: 97.97083282470703, Validation Loss: 0.6750553846359253, Validation Accuracy: 87.93333435058594
+
+Epoch 85, Training Loss: 0.053231220692396164, Training Accuracy: 98.20625305175781, Validation Loss: 0.6959575414657593, Validation Accuracy: 87.48333740234375
+
+Epoch 86, Training Loss: 0.05037420988082886, Training Accuracy: 98.33958435058594, Validation Loss: 0.6470901966094971, Validation Accuracy: 87.96666717529297
+
+Epoch 87, Training Loss: 0.051138006150722504, Training Accuracy: 98.24791717529297, Validation Loss: 0.6975776553153992, Validation Accuracy: 87.4000015258789
+
+Epoch 88, Training Loss: 0.05278443917632103, Training Accuracy: 98.20208740234375, Validation Loss: 0.6958468556404114, Validation Accuracy: 87.4000015258789
+
+Epoch 89, Training Loss: 0.05109921097755432, Training Accuracy: 98.27708435058594, Validation Loss: 0.6348825693130493, Validation Accuracy: 87.90833282470703
+
+Epoch 90, Training Loss: 0.05039113014936447, Training Accuracy: 98.30416107177734, Validation Loss: 0.6311201453208923, Validation Accuracy: 87.83333587646484
+
+Epoch 91, Training Loss: 0.04773690178990364, Training Accuracy: 98.32500457763672, Validation Loss: 0.6598209142684937, Validation Accuracy: 87.80833435058594
+
+Epoch 92, Training Loss: 0.05107853561639786, Training Accuracy: 98.2562484741211, Validation Loss: 0.6366161108016968, Validation Accuracy: 88.0
+
+Epoch 93, Training Loss: 0.04805126413702965, Training Accuracy: 98.3375015258789, Validation Loss: 0.6380830407142639, Validation Accuracy: 87.98333740234375
+
+Epoch 94, Training Loss: 0.05301447957754135, Training Accuracy: 98.12916564941406, Validation Loss: 0.6702852249145508, Validation Accuracy: 87.9749984741211
+
+Epoch 95, Training Loss: 0.0510244145989418, Training Accuracy: 98.18958282470703, Validation Loss: 0.6769817471504211, Validation Accuracy: 88.00833129882812
+
+Epoch 96, Training Loss: 0.049072153866291046, Training Accuracy: 98.31041717529297, Validation Loss: 0.6782174110412598, Validation Accuracy: 87.69166564941406
+
+Epoch 97, Training Loss: 0.04990373179316521, Training Accuracy: 98.24583435058594, Validation Loss: 0.7072219252586365, Validation Accuracy: 88.02499389648438
+
+Epoch 98, Training Loss: 0.04532492160797119, Training Accuracy: 98.45832824707031, Validation Loss: 0.7134433388710022, Validation Accuracy: 87.24166870117188
+
+Epoch 99, Training Loss: 0.04564569145441055, Training Accuracy: 98.39582824707031, Validation Loss: 0.6936224102973938, Validation Accuracy: 88.16666412353516
+
+Epoch 100, Training Loss: 0.04461716115474701, Training Accuracy: 98.45832824707031, Validation Loss: 0.7351299524307251, Validation Accuracy: 87.44166564941406
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Time taken to finish 100 epochs ===> 2679.5523750782013 secs
+
+Highest Validation Accuracy: 88.625% at Epoch: #20
+
