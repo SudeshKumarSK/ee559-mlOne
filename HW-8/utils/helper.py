@@ -81,49 +81,28 @@ class Engine():
 
         return X_std
     
-
     
-    """ def performProjection(self, X_train, feature1, feature2):
-
-        B = np.stack((X_train[:, feature1 - 1], X_train[:, feature2 - 1]), axis = 0)
-        print(B.shape)
-
-        # Compute the Projection Matrix.
-        proj = np.dot(X_train.T, B.T) / np.linalg.norm(B)**2
-
-        proj_Mat = np.dot(B.T, B)
-
-        projected_data = np.dot(X_train, proj_Mat)
-
-        return proj
-          
-        """
-
-
-    
-    def plotDataReducedFeatures(self, X_train, Y_train, feature1, feature2, position = "upper right"):
-        # Create a new figure with larger size
-        fig = plt.figure(figsize=(6, 6))
-
-        plt.scatter(X_train[Y_train == 1, feature1 - 1], X_train[Y_train == 1, feature2 - 1], alpha = 0.85, c = "#FF6D60", marker = "o", label = f"{self.classes[1]}")
-        plt.scatter(X_train[Y_train == 2, feature1 - 1], X_train[Y_train == 2, feature2 - 1], alpha = 0.85, c = "#569DAA", marker = "x", label = f"{self.classes[2]}")
-        plt.scatter(X_train[Y_train == 3, feature1 - 1], X_train[Y_train == 3, feature2 - 1], alpha = 0.85, c = "#263A29", marker = "^", label = f"{self.classes[3]}")
-
-        plt.title(f"Plot of Features {feature1} and {feature2}")
-        plt.legend(loc = position)
-        plt.xlabel(f"Feature x{feature1}")
-        plt.ylabel(f"Feature x{feature2}")
-        plt.show()
-
-    
-    def shuffleData(self, n, X, Y, feature1, feature2):
+    """ def shuffleData(self, n, X, Y, feature1, feature2):
         
-        B = np.stack((X[:, 1 - 1], X[:, 2 - 1]), axis = 0).T
+        B = np.stack((X[:, feature1 - 1], X[:, feature2 - 1]), axis = 0).T
         combinedData = np.hstack((B, Y.reshape(n, 1)))
     
-        # Set seed for reproducibility
-        # np.random.seed(42)
+        # Shuffle the combined array
+        np.random.shuffle(combinedData)
 
+        # Split the shuffled array back into data points and labels
+        shuffled_data_points = combinedData[:, 0:-1]
+        shuffled_labels = combinedData[:, -1:]
+        shuffled_labels = shuffled_labels.astype((int))
+
+        return (shuffled_data_points, shuffled_labels.reshape(n,)) """
+    
+
+    def shuffleData(self, n, X1, X2, Y):
+        
+        B = np.stack((X1, X2), axis = 0).T
+        combinedData = np.hstack((B, Y.reshape(n, 1)))
+    
         # Shuffle the combined array
         np.random.shuffle(combinedData)
 
@@ -135,8 +114,20 @@ class Engine():
         return (shuffled_data_points, shuffled_labels.reshape(n,))
     
 
+    def transformTrainData_PCA(self, X):
+        pca = sklearnPCA(n_components = 2)
+        X_PCA = pca.fit_transform(X) 
 
-    def train_MCP(self, n_train, X_train, Y_train, feature1, feature2, runs = 5):
+        return X_PCA    
+
+    def transformTrainData_LDA(self, X, Y):
+        lda = LDA(n_components = 2)
+        X_LDA = lda.fit_transform(X, Y)
+
+        return X_LDA
+
+
+    def train_MCP(self, n_train, X1, X2, Y_train, runs = 5):
         model_Dict = {}
         run_val_CER = []
 
@@ -154,7 +145,7 @@ class Engine():
             val_CER = []
             mean_val_CER = 0
 
-            X_train_shuffled, Y_train_shuffled = self.shuffleData(n_train, X_train, Y_train, feature1, feature2)
+            X_train_shuffled, Y_train_shuffled = self.shuffleData(n_train, X1, X2, Y_train)
 
             for i, (train_index, val_index) in enumerate(self.kf.split(X_train_shuffled)):
 
@@ -203,24 +194,55 @@ class Engine():
 
         return (run_max, run_min, model_min_CER, model_max_CER)
     
+
+    def plotScatterData(self, X1, X2, Y_train, position = "upper right"):
+        # Create a new figure with larger size
+        fig = plt.figure(figsize=(10, 8))
+
+        plt.scatter(X1[Y_train == 1], X2[Y_train == 1], alpha = 0.85, c = "#FF6D60", marker = "o", label = f"{self.classes[1]}")
+        plt.scatter(X1[Y_train == 2], X2[Y_train == 2], alpha = 0.85, c = "#569DAA", marker = "x", label = f"{self.classes[2]}")
+        plt.scatter(X1[Y_train == 3], X2[Y_train == 3], alpha = 0.85, c = "#263A29", marker = "^", label = f"{self.classes[3]}")
+
+        plt.title(f"Plot of Features x1 and x2")
+        plt.legend(loc = position)
+        plt.xlabel(f"Feature x1")
+        plt.ylabel(f"Feature x2")
+        plt.show()
     
-    def plotDecisionBoundary_MCP(self, X_train, Y_train, model, feature1, feature2, title, position = "uppen right" ):
+
+
+    def plotDataReducedFeatures(self, X_train, Y_train, feature1, feature2, position = "upper right"):
+        # Create a new figure with larger size
+        fig = plt.figure(figsize=(10, 8))
+
+        plt.scatter(X_train[Y_train == 1, feature1 - 1], X_train[Y_train == 1, feature2 - 1], alpha = 0.85, c = "#FF6D60", marker = "o", label = f"{self.classes[1]}")
+        plt.scatter(X_train[Y_train == 2, feature1 - 1], X_train[Y_train == 2, feature2 - 1], alpha = 0.85, c = "#569DAA", marker = "x", label = f"{self.classes[2]}")
+        plt.scatter(X_train[Y_train == 3, feature1 - 1], X_train[Y_train == 3, feature2 - 1], alpha = 0.85, c = "#263A29", marker = "^", label = f"{self.classes[3]}")
+
+        plt.title(f"Plot of Features {feature1} and {feature2}")
+        plt.legend(loc = position)
+        plt.xlabel(f"Feature x{feature1}")
+        plt.ylabel(f"Feature x{feature2}")
+        plt.show()
+
+
+    def plotDecisionBoundary_MCP(self, X1, X2, Y_train, model, title, position = "upper right", h = 0.01):
 
         # create a mesh to plot in
-        x1_min, x1_max = X_train[:, feature1 - 1].min() - 1, X_train[:, feature1 - 1].max() + 1
-        x2_min, x2_max = X_train[:, feature2 - 1].min() - 1, X_train[:, feature2 - 1].max() + 1
-        X1, X2 = np.meshgrid(np.arange(x1_min, x1_max, 0.01),
-                            np.arange(x2_min, x2_max, 0.01))
+        x1_min, x1_max = X1.min() - 1, X1.max() + 1
+        x2_min, x2_max = X2.min() - 1, X2.max() + 1
+        grid_X1, grid_X2 = np.meshgrid(np.arange(x1_min, x1_max, h),
+                            np.arange(x2_min, x2_max, h))
 
-        predictions = model.predict(np.c_[X1.ravel(), X2.ravel()])
+        predictions = model.predict(np.c_[grid_X1.ravel(), grid_X2.ravel()])
 
-        predictions = predictions.reshape(X1.shape)
+        predictions = predictions.reshape(grid_X1.shape)
 
         plt.figure(figsize=(10, 8))
-        plt.contourf(X1, X2, predictions, cmap=plt.cm.Paired, alpha=1)
-        plt.scatter(X_train[Y_train == 1, feature1 - 1], X_train[Y_train == 1, feature2 - 1], c = "#569DAA", marker = "o", label = f"{self.classes[1]}")
-        plt.scatter(X_train[Y_train == 2, feature1 - 1], X_train[Y_train == 2, feature2 - 1], c = "#FD8A8A", marker = "x", label = f"{self.classes[2]}")
-        plt.scatter(X_train[Y_train == 3, feature1 - 1], X_train[Y_train == 3, feature2 - 1], c = "#E9A178", marker = "^", label = f"{self.classes[3]}")
+        plt.contourf(grid_X1, grid_X2, predictions, cmap=plt.cm.Paired, alpha=1)
+        plt.scatter(X1[Y_train == 1], X2[Y_train == 1], c = "#569DAA", marker = "o", label = f"{self.classes[1]}")
+        plt.scatter(X1[Y_train == 2], X2[Y_train == 2], c = "#FD8A8A", marker = "x", label = f"{self.classes[2]}")
+        plt.scatter(X1[Y_train == 3], X2[Y_train == 3], c = "#E9A178", marker = "^", label = f"{self.classes[3]}")
         plt.title(title)
         plt.legend(loc = position)
         plt.xlabel(f"Feature x1")
