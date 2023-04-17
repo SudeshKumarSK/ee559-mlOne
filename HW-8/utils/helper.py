@@ -198,10 +198,37 @@ class Engine():
         print(f"The Higesh Mean Classification Error Rate -> {run_maximum_val_CER} was achieved at run: {run_max + 1}")
         print("-----------------------------------------------------------------------------------------------------------------------------------")
 
+        model_min_CER = model_Dict[run_min]
+        model_max_CER = model_Dict[run_max]
 
-        return (run_max, run_min, model_Dict)
+        return (run_max, run_min, model_min_CER, model_max_CER)
     
     
+    def plotDecisionBoundary_MCP(self, X_train, Y_train, model, feature1, feature2, title, position = "uppen right" ):
+
+        # create a mesh to plot in
+        x1_min, x1_max = X_train[:, feature1 - 1].min() - 1, X_train[:, feature1 - 1].max() + 1
+        x2_min, x2_max = X_train[:, feature2 - 1].min() - 1, X_train[:, feature2 - 1].max() + 1
+        X1, X2 = np.meshgrid(np.arange(x1_min, x1_max, 0.01),
+                            np.arange(x2_min, x2_max, 0.01))
+
+        predictions = model.predict(np.c_[X1.ravel(), X2.ravel()])
+
+        predictions = predictions.reshape(X1.shape)
+
+        plt.figure(figsize=(10, 8))
+        plt.contourf(X1, X2, predictions, cmap=plt.cm.Paired, alpha=1)
+        plt.scatter(X_train[Y_train == 1, feature1 - 1], X_train[Y_train == 1, feature2 - 1], c = "#569DAA", marker = "o", label = f"{self.classes[1]}")
+        plt.scatter(X_train[Y_train == 2, feature1 - 1], X_train[Y_train == 2, feature2 - 1], c = "#FD8A8A", marker = "x", label = f"{self.classes[2]}")
+        plt.scatter(X_train[Y_train == 3, feature1 - 1], X_train[Y_train == 3, feature2 - 1], c = "#E9A178", marker = "^", label = f"{self.classes[3]}")
+        plt.title(title)
+        plt.legend(loc = position)
+        plt.xlabel(f"Feature x1")
+        plt.ylabel(f"Feature x2")
+        plt.show()
+
+
+
 
         
 
