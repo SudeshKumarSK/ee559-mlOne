@@ -1,3 +1,7 @@
 .DS_Store
-.ipynb_checkpoints
 utils/__pycache__
+.ipynb_checkpoints
+HW-8/utils/__pycache__/helper.cpython-310.pyc
+HW-8.zip
+HW-8/utils/__pycache__/helper.cpython-310.pyc
+*.pyc
